@@ -1,0 +1,55 @@
+@charset "UTF-8";
+@import "nav.css";
+@import "initialization.css";
+.friends{
+	width: 1000px;
+	min-width: 800px;
+	margin:0 auto;
+	margin-top:200px;
+}
+.friends h3{
+	color:rgba(68,68,68,0.9);
+	font-weight: normal;
+}
+.friends_box img{
+	width: 100%;
+	z-index: 1;
+	transform:scale(0.7);
+	transition:all .2s ease-in-out;
+}
+.friends_box{
+	width: 200px;
+	height: 250px;
+	text-align: center;
+	background-color: rgba(255,255,255,1);
+	box-shadow: 0px 3px 10px 	rgba(0,0,0,0.08);
+	transition:all .2s ease-in-out;
+}
+.friends_box h3{
+	margin-top: -8px;
+	font-size: 1.5em;
+	transition:all .2s ease-in-out;
+}
+.friends_box:hover{
+	height: 300px;
+	font-size: 0.9em;
+}
+.friends_box:hover.friends_box img{
+	/*border-radius: 12450px;*/
+	transform:scale(1);
+}
+.friends_box:hover.friends_box h3{
+	padding:15px;
+}
+.friends_box_invisible{
+	display: none;
+	position: absolute;
+	text-align: center;
+}
+.motto{
+	position: absolute;
+	bottom: 1px;
+}
+.friends_box:hover .friends_box_invisible{
+	display: block;
+}
