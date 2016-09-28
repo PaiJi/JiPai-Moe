@@ -2,10 +2,10 @@
 @import "nav.css";
 @import "initialization.css";
 .friends{
-	width: 1000px;
 	min-width: 800px;
 	margin:0 auto;
 	margin-top:200px;
+	text-align: center;
 }
 .friends h3,p{
 	color:rgba(68,68,68,0.9);
@@ -25,7 +25,7 @@
 	box-shadow: 0px 3px 10px 	rgba(0,0,0,0.08);
 	position: relative;
 	display: inline-block;
-	margin:0px 20px 0px 20px;
+	margin:0px 40px 0px 40px;
 	vertical-align: top;
 	transition:all .2s ease-in-out;
 }
@@ -61,7 +61,7 @@ sidebar a{
 
 /*伪类HOVER区域开始*/
 .friends_box:hover{
-	height: 350px;
+	height: 300px;
 	/*font-size: 0.9em;*/
 }
 .friends_box:hover.friends_box img{
