@@ -12,7 +12,7 @@
 <body>
 	<?php include'part/nav.php';?>
 	<div class="title">
-		<h2></h2>
+		<h2>Web Developer</h2>
 	</div>
 	<div class="friends">
 		<div class="friends_box">
