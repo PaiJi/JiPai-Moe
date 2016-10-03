@@ -1,20 +1,29 @@
 @charset "UTF-8";
 @import "nav.css";
 @import "initialization.css";
+@import 'https://fonts.gmirror.org/css?family=Ubuntu+Condensed';
+@import 'https://fonts.gmirror.org/css?family=Open+Sans';
 .title{
 	color:rgba(68,68,68,0.9);
-	font-size: 0.9em;
+	font-size: 1.1em;
+	font-family: 'Ubuntu Condensed',Microsoft YaHei;
 }
 .friends{
 	min-width: 800px;
 	margin:0 auto;
 	margin-top:200px;
-	
+	text-align: center;
 }
-.friends h3,p{
+.friends a,h3,p{
 	color:rgba(68,68,68,0.9);
 	font-weight: normal;
-	text-align: center;
+	font-family: 'open sans',Microsoft YaHei;
+	text-decoration: none;
+}
+.friends_box h3{
+	font-size: 1.3em;
+	line-height: 40px;
+	transition:all .2s ease-in-out;
 }
 .friends_box img{
 	width: auto;
@@ -27,7 +36,6 @@
 .friends_box{
 	width: 240px;
 	height: 100px;
-	
 	background-color: rgba(255,255,255,1);
 	box-shadow: 0px 3px 10px 	rgba(0,0,0,0.08);
 	position: relative;
@@ -36,15 +44,9 @@
 	vertical-align: top;
 	transition:all .2s ease-in-out;
 }
-.friends_box h3{
-	font-size: 1.3em;
-	line-height: 100px;
-	transition:all .2s ease-in-out;
-}
 .friends_box_invisible{
 	margin-top: 10px;
-	/*display: none;*/
-	opacity: 0;
+	display: block;
 	transition:all 500ms ease;
 	transition:opacity .1s ease;
 }
@@ -52,26 +54,6 @@
 	width: 140px;
 	float: right;
 }
-.sidebar{
-	/*position: relative;
-	right: 0px;
-	top: -243px;*/
-	display: none;
-	transition:all 1.2s ease;
-}
-sidebar ul{
-	list-style-type: none;
-}
-sidebar li{
-	margin:20px 0px 20px 0px;
-	width: 150px;
-	height: 45px;
-	background-color: blue;
-}
-sidebar a{
-	padding: 2px 20px 2px 20px;
-}
-
 /*伪类HOVER区域开始*/
 .friends_box:hover{
 	/*height: 300px;*/
@@ -88,7 +70,10 @@ sidebar a{
 	line-height: 40px;
 }
 .friends_box:hover .friends_box_invisible{
-	display: block;
+		display: block;
+}
+.friends_box:hover .friends_box_invisible{
+
 	opacity: 1;
 	transition:opacity 1s ease 0.1s;
 }
