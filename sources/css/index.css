@@ -1,6 +1,9 @@
 @charset "UTF-8";
 @import "nav.css";
 @import "initialization.css";
+body{
+	text-align: center;
+}
 .avatar{
 	position: absolute;
 	top: 50%;
@@ -16,4 +19,33 @@
 }
 .avatar img:hover{
 	transform:scale(0.95);
+}
+.motto{
+	position: absolute;
+	bottom: 140px;
+	width: 800px;
+	left: 50%;
+	margin-left: -400px;
+	font-size: 1.2em;
+	color:rgba(68,68,68,0.9);
+}
+#motto_content::before{
+	content: '“';
+	font-family: Arial;
+	font-size: 4em;
+}
+#motto_content::after{
+	content: '”';
+	font-family: Arial;
+	font-size: 4em;
+	line-height: 1em;
+}
+#sources::before{
+	content: '「';
+}
+#sources::after{
+	content: '」';
+}
+#sources{
+	margin-top: 30px;
 }

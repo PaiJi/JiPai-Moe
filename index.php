@@ -14,5 +14,9 @@
 	<div class="avatar"> 
 		<img src="sources/img/avatar.jpg">
 	</div>
+	<div class="motto">
+		<p id="motto_content">迷失的人迷失了,相逢的人会再相逢。</p>
+		<p id="sources">挪威的森林</p>
+	</div>
 </body>
 </html>
