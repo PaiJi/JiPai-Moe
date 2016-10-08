@@ -6,7 +6,7 @@ body{
 }
 .avatar{
 	position: absolute;
-	top: 50%;
+	top: 35%;
 	left: 50%;
 	margin-top: -105.5px;
 	margin-left: -105.5px;
@@ -22,7 +22,7 @@ body{
 }
 .motto{
 	position: absolute;
-	bottom: 140px;
+	bottom: 200px;
 	width: 800px;
 	left: 50%;
 	margin-left: -400px;
