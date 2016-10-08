@@ -10,14 +10,18 @@
 	margin:0px 20px 0px 20px;
 	padding: 20px;
 	font-size: 1.1em;
-
-	border-width: 1px;
-	border-style: none none none none;
-	border-color: rgba(68,68,68,0.6);
 	transition:all .2s ease-in-out;
 }
 .nav a:hover{
 	/*color: rgba(68,68,68,0.8);*/
+	border-width: 1px;
+	/*border-style: none none none none;*/
+	border-color: rgba(68,68,68,0.6);
 	border-style: none none solid none;
+	text-shadow:0 0 1px;
+}
+.active{
+	border-style: none none solid none;
+	border-width: 1px;
 	text-shadow:0 0 1px;
 }

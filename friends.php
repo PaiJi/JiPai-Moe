@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="sources/css/friends.css">
 	<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
-
+	<script src="sources/js/nav_active.js"></script>
 	<title>羁绊|鸡排Store</title>
 	<meta name="description" content="菊苣，你缺大腿挂件吗？">
 	<meta name="keywords" content="鸡排">
@@ -48,6 +48,13 @@
 				<p>前端</p>
 			</div>
 			</a>
+		</div>
+		<div class="friends_box">
+			<a href="http://shiromi.org/"><img src="sources/img/shiromi.jpg">
+			<h3>凌喵</h3>
+			<div class="friends_box_invisible">
+				<p>全栈</p>
+			</div>
 		</div>
 		</div>
 	</div>
