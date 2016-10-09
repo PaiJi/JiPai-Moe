@@ -50,13 +50,12 @@
 			</a>
 		</div>
 		<div class="friends_box">
-			<a href="http://shiromi.org/"><img src="sources/img/shiromi.jpg">
+			<a href="http://shiromi.org"><img src="sources/img/avatar/shiromi.jpg">
 			<h3>凌喵</h3>
 			<div class="friends_box_invisible">
-				<p>全栈</p>
+				<p>全栈菊苣</p>
 			</div>
-		</div>
-		</a>
+			</a>
 		</div>
 	</div>
 	<div class="motto"><p>相逢有时·后会无期</p></div>	

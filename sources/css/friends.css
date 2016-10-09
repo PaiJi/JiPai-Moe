@@ -11,7 +11,7 @@
 .friends{
 	min-width: 800px;
 	margin:0 auto;
-	margin-top:200px;
+	margin-top:110px;
 	text-align: center;
 }
 .friends a,h3,p{
@@ -21,8 +21,9 @@
 	text-decoration: none;
 }
 .friends_box h3{
-	font-size: 1.3em;
-	line-height: 40px;
+	font-size: 1.4em;
+	/*line-height: 40px;*/
+	margin-top: 36px;
 	transition:all .2s ease-in-out;
 }
 .friends_box img{
@@ -40,13 +41,16 @@
 	box-shadow: 0px 3px 10px 	rgba(0,0,0,0.08);
 	position: relative;
 	display: inline-block;
-	margin:30px 40px 0px 40px;
+	/*margin:30px 40px 0px 40px;*/
+	margin:40px;
 	vertical-align: top;
 	transition:all .2s ease-in-out;
 }
 .friends_box_invisible{
+	position: relative;
 	margin-top: 10px;
 	display: block;
+	opacity: 0;
 	transition:all 500ms ease;
 	transition:opacity .1s ease;
 }
@@ -66,8 +70,9 @@
 }
 .friends_box:hover.friends_box h3{
 	/*padding:15px;*/
-	margin-top: 0px;
-	line-height: 40px;
+	margin-top: 6px;
+	font-size: 1.3em;
+	/*line-height: 40px;*/
 }
 .friends_box:hover .friends_box_invisible{
 		display: block;
@@ -77,16 +82,11 @@
 	opacity: 1;
 	transition:opacity 1s ease 0.1s;
 }
-friends_box:hover sidebar{
-	right: -202px;
-	top: -315px; 
-	/*display: block;*/
-}
 /*伪类HOVER区域结束*/
 
 .motto{
 	position: absolute;
-	top: 20px;
+	bottom: 80px;
 	width: 100%;
 }
 .motto p{

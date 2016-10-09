@@ -12,9 +12,14 @@
 <body>
 	<?php include'part/nav.php';?>
 	<div class="content">
-		<div id="">
-			<h2></h2>
-			<div></div>
+	<h1>过去·现在·未来的大坑</h1>
+		<div id="pages">
+			<h2>Pages</h2>
+			<div class="works_box">
+				<a href=""><h3>JiPai.MoE</h3></a>
+				<h6>Status:Dev</h6>
+				<p>鸡排MOE个人首页第一个大版本（某种意义上）</p>
+			</div>
 		</div>
 	</div>
 </body>
