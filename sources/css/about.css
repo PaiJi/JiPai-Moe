@@ -13,6 +13,7 @@
 }
 .leftsidebar img{
 	width: 100%;
+	animation:load 1s;
 }
 .leftsidebar{
 	width: 400px;
@@ -31,4 +32,8 @@
 }
 .leftsidebar img:hover{
 	border-radius: 15px;
+}
+@keyframes load{
+	from{border-radius: 1024px;}
+	to{border-radius: 0px;}
 }

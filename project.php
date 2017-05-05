@@ -12,13 +12,35 @@
 <body>
 	<?php include'part/nav.php';?>
 	<div class="content">
-	<h1>过去·现在·未来的大坑</h1>
+	<h1>天坑</h1>
 		<div id="pages">
-			<h2>Pages</h2>
+			<h2>PAGES</h2>
 			<div class="works_box">
-				<a href=""><h3>JiPai.MoE</h3></a>
-				<h6>Status:Dev</h6>
+				<a href="http://jipai.moe"><h3>JiPai.MoE</h3>
+				<h4>Status:Dev</h4>
 				<p>鸡排MOE个人首页第一个大版本（某种意义上）</p>
+				</a>
+			</div>
+			<div class="works_box">
+				<a href="http://jipai.moe/ingress"><h3>INGRESS!NEUSOFT</h3>
+				<h4>Status:stable</h4>
+				<p>一个Neuer的INGRESS网站，早期练习项目，这个游戏怎么GayGay的。</p>
+				</a>
+			</div>
+			<div class="works_box">
+				<a href="http://jipai.moe/ingress"><h3>INGRESS!NEUSOFT</h3>
+				<h4>Status:stable</h4>
+				<p>一个Neuer的INGRESS网站，早期练习项目，这个游戏怎么GayGay的。</p>
+				</a>
+			</div>
+		</div>
+		<div id="project">
+			<h2>PROJECTS</h2>
+			<div class="works_box">
+				<a href="#"><h3>AEGUS</h3>
+				<h4>Status:planed</h4>
+				<p>一个策划中的资讯中心。</p>
+				</a>
 			</div>
 		</div>
 	</div>

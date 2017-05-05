@@ -2,6 +2,8 @@
 @import "nav.css";
 @import "initialization.css";
 @import 'https://fonts.gmirror.org/css?family=Ubuntu+Condensed';
+@import 'https://fonts.gmirror.org/css?family=Open+Sans';
+@import 'https://fonts.gmirror.org/css?family=Montserrat';
 .content{
 	width: 1000px;
 	min-width: 800px;
@@ -10,28 +12,56 @@
 	text-align: center;
 }
 .content h1{
-	width: 400px;
+	width:150px;
+	font-size: 3em;
 	display: inline-block;
 	padding-bottom: 15px;
 	border-bottom-style: solid;
 	border-width: 1px;
+	transition:all .2s ease;
 }
-#pages{
+.content h1:hover{
+	width: 300px;
+}
+#pages,#project{
 	margin-top: 10px;
+	overflow: hidden;
 }
-#pages h2{
+#pages h2,#project h2{
 	font-family: 'Ubuntu Condensed';
 	text-align: left;
+	font-size: 2em;
 }
 .content a{
 	text-decoration: none;
 }
 .works_box{
-	text-align: left;
+	/*display: inline-block;*/
+	float: left;
+	/*text-align: left;*/
 	width: 250px;
+	height: 130px;
 	margin:40px;
+	padding: 20px;
 	background: #ffffff;
+	color:rgba(68,68,68,0.9);
+	transition:all .2s ease;
 }
-.works_box h6{
+.works_box h4{
+	font-family: 'Montserrat';
 	font-style: oblique;
+	margin-top: 5px;
+	margin-bottom:20px;
+	color:rgba(68,68,68,0.6);
+
+}
+.works_box a:link{
+color:rgba(68,68,68,0.9);
+}
+.works_box a:visited{
+	color:rgba(68,68,68,0.9); 
+}
+.works_box:hover{
+	box-shadow:0 15px 30px rgba(0,0,0,0.1);
+	transform:translate3d(0, -2px, 0);
 }
