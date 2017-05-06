@@ -1,9 +1,9 @@
 @charset "UTF-8";
 @import "nav.css";
 @import "initialization.css";
-@import 'https://fonts.gmirror.org/css?family=Ubuntu+Condensed';
-@import 'https://fonts.gmirror.org/css?family=Open+Sans';
-@import 'https://fonts.gmirror.org/css?family=Montserrat';
+@import 'https://fonts.proxy.ustclug.org/css?family=Ubuntu+Condensed';
+@import 'https://fonts.proxy.ustclug.org/css?family=Open+Sans';
+@import 'https://fonts.proxy.ustclug.org/css?family=Montserrat';
 .content{
 	width: 1000px;
 	min-width: 800px;

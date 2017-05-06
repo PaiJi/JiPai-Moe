@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @import "nav.css";
 @import "initialization.css";
-@import 'https://fonts.gmirror.org/css?family=Ubuntu+Condensed';
-@import 'https://fonts.gmirror.org/css?family=Open+Sans';
+@import 'https://fonts.proxy.ustclug.org/css?family=Ubuntu+Condensed';
+@import 'https://fonts.proxy.ustclug.org/css?family=Open+Sans';
 .title{
 	color:rgba(68,68,68,0.9);
 	font-size: 1.1em;
