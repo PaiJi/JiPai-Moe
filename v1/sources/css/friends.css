@@ -1,0 +1,94 @@
+@charset "UTF-8";
+@import "nav.css";
+@import "initialization.css";
+@import 'https://fonts.proxy.ustclug.org/css?family=Ubuntu+Condensed';
+@import 'https://fonts.proxy.ustclug.org/css?family=Open+Sans';
+.title{
+	color:rgba(68,68,68,0.9);
+	font-size: 1.1em;
+	font-family: 'Ubuntu Condensed',Microsoft YaHei;
+}
+.friends{
+	min-width: 800px;
+	margin:0 auto;
+	margin-top:50px;
+	text-align: center;
+}
+.friends a,h3,p{
+	color:rgba(68,68,68,0.9);
+	font-weight: normal;
+	font-family: 'open sans',Microsoft YaHei;
+	text-decoration: none;
+}
+.friends_box h3{
+	font-size: 1.4em;
+	/*line-height: 40px;*/
+	margin-top: 36px;
+	transition:all .2s ease-in-out;
+}
+.friends_box img{
+	width: auto;
+	height: 100px;
+	float: left;
+	display: block;
+	/*transform:scale(0.7);*/
+	transition:all .2s ease-in-out;
+}
+.friends_box{
+	width: 240px;
+	height: 100px;
+	background-color: rgba(255,255,255,1);
+	box-shadow: 0px 3px 10px 	rgba(0,0,0,0.08);
+	position: relative;
+	display: inline-block;
+	/*margin:30px 40px 0px 40px;*/
+	margin:40px;
+	vertical-align: top;
+	transition:all .2s ease-in-out;
+}
+.friends_box_invisible{
+	position: relative;
+	margin-top: 10px;
+	display: block;
+	opacity: 0;
+	transition:all 500ms ease;
+	transition:opacity .1s ease;
+}
+.friends_box_invisible p{
+	width: 140px;
+	float: right;
+}
+/*伪类HOVER区域开始*/
+.friends_box:hover{
+	/*height: 300px;*/
+	/*font-size: 0.9em;*/
+}
+.friends_box:hover.friends_box img{
+	transform:scale(1);
+	filter:blur(2px);
+	-webkit-filter:blur(2px);
+}
+.friends_box:hover.friends_box h3{
+	/*padding:15px;*/
+	margin-top: 6px;
+	font-size: 1.3em;
+	/*line-height: 40px;*/
+}
+.friends_box:hover .friends_box_invisible{
+		display: block;
+}
+.friends_box:hover .friends_box_invisible{
+
+	opacity: 1;
+	transition:opacity 1s ease 0.1s;
+}
+/*伪类HOVER区域结束*/
+
+.motto{
+	position: absolute;
+	bottom: 80px;
+	width: 100%;
+}
+.motto p{
+	text-align: center;
+}
