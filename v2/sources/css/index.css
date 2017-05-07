@@ -1,0 +1,33 @@
+@charset "UTF-8";
+@import "initialization.css";
+@import 'https://fonts.lug.ustc.edu.cn/css?family=Raleway';
+
+body{
+    text-align: center;
+}
+.content{
+    position: absolute;
+    top:30%;
+    left:30%;
+    border:solid;
+    border-width: 0px;
+    width:600px;
+    height:200px;
+    border-radius: 6px;
+    background-color: white;
+    font-family: Raleway,"思源黑体";
+    letter-spacing: 3px;
+}
+.content p{
+    margin-top:50px;
+}
+.content span{
+    letter-spacing: 1px;
+}
+#motto{
+    
+}
+#motto2{
+    font-style:italic;
+    font-size:0.9em;
+}
