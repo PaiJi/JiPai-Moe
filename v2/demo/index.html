@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="t.css">
+    </head>
+    <body>
+    <ul class="nav">
+    	<li><a href="#">123</a></li>
+    	<li><a href="#">123</a></li>
+    	<li><a href="#">123</a></li>
+    	<li><a href="#">123</a></li>
+    	<li><a href="#">123</a></li>
+
+ <div style="overflow: hidden;clear: both;float: none;"></div>
+    </ul>
+    <style type="text/css">
+    	*{
+    		margin: 0;
+    		padding: 0;
+    	}
+    	html{
+    		background-color: #eee;
+    	}
+    	body{
+    		width: 1000px;
+    		background-color: #fff;
+    		text-align: center;
+    	}
+    	ul{
+    		display: inline-block;
+    		background-color: #66ccff;
+    		color: #fff;
+    	}
+    	li{
+    		list-style: none;
+    		float: left;
+    	}
+    	a{
+    		color: #fff;
+    		text-decoration: none;
+    		margin: 5px 20px;
+    	}
+    	li:before{
+    		content: "/";
+    		display: inline-block;
+    	}
+    	li:nth-child(1):before{
+    		display: none;
+    	}
+    </style>
+    </body>
+</html>

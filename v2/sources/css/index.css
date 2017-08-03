@@ -4,11 +4,11 @@
 
 body{
     text-align: center;
+
 }
 .content{
-    position: absolute;
-    top:30%;
-    left:30%;
+
+    margin: 0 auto;
     border:solid;
     border-width: 0px;
     width:600px;
