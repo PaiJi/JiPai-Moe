@@ -1,2 +1,6 @@
 #SFTP
 sftp-config.json
+#SaSS
+.sass-cache
+config.rb
+sass
