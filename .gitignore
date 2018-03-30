@@ -4,3 +4,8 @@ sftp-config.json
 .sass-cache
 config.rb
 sass
+#yarn
+yarn.lock
+yarn-error.log
+#node
+/node_modules
