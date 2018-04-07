@@ -1,7 +1,14 @@
 {
+  "scripts": {
+    "start": "set NODE_ENV=development && ./node_modules/.bin/gulp",
+    "dev": "set NODE_ENV=development && ./node_modules/.bin/gulp dev"
+  },
   "dependencies": {
+    "compass": "^0.1.1",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-sass": "^3.2.1"
+    "gulp-sass": "^3.2.1",
+    "gulp-watch": "^5.0.0"
   },
   "devDependencies": {
     "browser-sync": "^2.23.6"
