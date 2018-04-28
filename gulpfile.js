@@ -32,6 +32,7 @@ gulp.task('dev', ['sass', 'serve'], function (cb) {
     gulp.watch('./sources/css/sass/*.scss', ['sass']);
 
     gulp.watch('./*.html', ['reload']);
+    gulp.watch('./lab/*.html', ['reload']);
     gulp.watch('./sources/css/sass/*.scss', ['reload']);
     gulp.task('console');
 });
