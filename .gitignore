@@ -9,3 +9,5 @@ yarn.lock
 yarn-error.log
 #node
 /node_modules
+#VScode config
+.vscode
