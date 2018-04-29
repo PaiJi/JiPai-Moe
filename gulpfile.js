@@ -14,6 +14,11 @@ gulp.task('sass', function () {
         .pipe(sass({ outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(gulp.dest('./sources/css/stylesheets/'));
 });
+gulp.task('sass-lab', function () {
+    gulp.src('./lab/sources/css/sass/*.scss')
+        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+        .pipe(gulp.dest('./lab/sources/css/stylesheets/'));
+});
 gulp.task('serve', function (done) {
     browserSync.init({
         server: {
@@ -30,10 +35,11 @@ gulp.task('dev', ['sass', 'serve'], function (cb) {
     //gulp.watch('./sources/**/*.js', ['scripts']);
     //gulp.watch('./**/*.html', ['html']);
     gulp.watch('./sources/css/sass/*.scss', ['sass']);
-
+    gulp.watch('./lab/sources/css/sass/*.scss', ['sass-lab']);
     gulp.watch('./*.html', ['reload']);
     gulp.watch('./lab/*.html', ['reload']);
     gulp.watch('./sources/css/sass/*.scss', ['reload']);
+    gulp.watch('./lab/sources/css/sass/*.scss', ['reload']);
     gulp.task('console');
 });
 

@@ -4,66 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="sources/css/stylesheets/screen.css">
+    <link rel="stylesheet" type="text/css" href="sources/css/stylesheets/common.css">
     <script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/vue/2.5.13/vue.js"></script>
     <title>研发部——鸡排 / JiPai — 光るなら</title>
-    <meta name="description" content="这是JiPai存放故事的地方，欢迎来参观。">
+    <meta name="description" content="专业开坑100百年，负责空想，拒绝干活。">
 </head>
 <body>
     <div class="container">
     <header>
         <div class="site-title">
-            <h3>JiPai</h3>
-            <h5>Store</h5>
-            <p>一个存放故事的地方</p>
+            <h3>JiPai的生产车间</h3>
+            <p>咕咕咕，一定按时完成！</p>
+            <del>这次一定没问题！</del>
         </div>
+        <hr>
     </header>
-    <hr>
-    <nav>
-        <a href="https://blog.jipai.moe">日记</a>
-        <a href="https://grit.jipai.moe" class="disabled">唠叨</a>
-        <a href="https://bgm.jipai.moe" class="disabled">番剧</a>
-        <a href="https://lab.jipai.moe" class="disabled">研发部</a>
-        <a href="">伙伴们</a>
-        <a href="">关于我</a>
-        <a href="https://status.jipai.moe" class="disabled">平台状态</a>
-    </nav>
-        <div class="content">
-            <div class="timeline" 
-            v-bind:class="{ invisible: invisible }" id="timeline">
-                <p>时间轴功能正在开发中</p>
+
+    <div class="project-list">
+        <div class="project-stat-init">
+            <h2> initialize</h2>
+            <div class="project-item">
+                <a href="#"><h3>Cornerstone</h3></a>
+                <span>Theme</span>
+                <span>2018/4/28-?</span>
+                <p>首个WordPress主题,致力于全站风格统一。</p>
             </div>
-            <div class="aboutme" id="aboutme">
-                <p>95后，真实大龄肥宅。</p>
-                <p>养鸽协会终身会员，先鸽后肝，不行装死。</p>
-                <p>三分钟热度，目前还挂在年度目标上的有：<br><span class="dashed">前端进阶</span>，考过<span class="dashed">英语六级</span>AND<span class="dashed">日语N5</span>，<span class="dashed">画画入门</span>。<br>以上目标，统统没有实现。</p>
-                <br>
-                <h5>你也可以在这里找到我</h5>
-                <a href="https://twitter.com/jipairamen">Twitter</a>
-                <a href="http://bgm.tv/user/338144">Bangumi</a>
-                <a href="https://www.instagram.com/jipai16/">Instagram</a>
-                <br><br>
-                <h5>我最近喜欢看啥</h5>
-                <p><a href="http://bgm.tv/subject/4077">·王牌投手振臂高挥</a><a href="http://bgm.tv/subject/174141">·棒球伙伴</a><a href="http://bgm.tv/subject/204027">·齐木楠雄的灾难第二季</a></p>
-                <br>
-                <h5>我最近在玩的游戏</h5>
-                <p>星露谷物语 城市天际线 过山车之星</p>
+            <div class="project-item">
+                <a href="#">
+                    <h3>JiPai's Bangumi</h3>
+                </a>
+                <span>Project</span>
+                <span>2018/2/1-?</span>
+                <p>只属于JiPai的Bangumi管理项目</p>
+            </div>
+            <div class="project-item">
+                <a href="#">
+                    <h3>PixelAnt</h3>
+                </a>
+                <span>Project</span>
+                <span>2017/5/1</span>
+                <p>一个基于ThinkPHP的在线相册。</p>
+            </div>
+            <div class="project-item">
+                <a href="#">
+                    <h3>JiPai's Grit</h3>
+                </a>
+                <span>Project</span>
+                <span>2017/5/1</span>
+                <p>一个基于CodeIgniter的私人“推特”。</p>
+            </div>
+            <div class="project-item">
+                <a href="#">
+                    <h3>CyberSystem</h3>
+                </a>
+                <span>project</span>
+                <span>2017/5/1</span>
+                <p>一个使用Uptimerobot来监测所有服务在线情况的小工具。</p>
             </div>
         </div>
-        <footer>
-            <p>©2018「JiPai·Store」製作委員会</p>
-        </footer>
+        <div class="project-stat-dev">
+            <h2> develop</h2>
+            <div class="project-item">
+                <a href="#">
+                    <h3>JiPai.Moe</h3>
+                </a>
+                <span>webiste</span>
+                <span>2017/1/21</span>
+                <p>JiPai的个人站点。</p>
+            </div>
+            <div class="project-item">
+                <a href="#">
+                    <h3>Nyanket APP</h3>
+                </a>
+                <span>Adnroid</span>
+                <span>2017/5/1</span>
+                <p>为<del style="color:gray;">喵桶饭</del>喵通贩开发的核销APP。</p>
+            </div>
+        </div>
+        <div class="project-stat-lts">
+            <h2> LTS</h2>
+            <div class="project-item">
+                <a href="#">
+                    <h3>INGRESS IN NEUSOFT</h3>
+                </a>
+                <span>webiste</span>
+                <span>2017/1/21</span>
+                <p>曾经的小团体，后来的大撕逼。</p>
+            </div>
+            <div class="project-item">
+                <a href="#">
+                    <h3>SHOUXIAJI.CN</h3>
+                </a>
+                <span>webiste</span>
+                <span>2017/1/21</span>
+                <p>这是NyanKet Inc发展史上的一小步，却是人类的一大步。</p>
+            </div>
+        </div>
+        <div class="project-stat-suspend">
+            <h2> suspend</h2>
+        </div>
+        <div class="project-stat-term">
+            <h2> termination</h2>
+            <div class="project-item">
+                <a href="#">
+                    <h3>Aegis</h3>
+                </a>
+                <span>webiste</span>
+                <span>2017/1/1-2018/1/1</span>
+                <p>海外代购+展会情报展示+参展作品ISBN站，受当地法律法规影响终止企划。</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <hr>
+        <nav>
+            <a href="https://blog.jipai.moe">日记</a>
+            <a href="https://grit.jipai.moe" class="disabled">唠叨</a>
+            <a href="https://bgm.jipai.moe" class="disabled">番剧</a>
+            <a href="https://lab.jipai.moe" class="disabled">研发部</a>
+            <a href="https://www.jipai.moe/#friends">伙伴们</a>
+            <a href="https://www.jipai.moe/#aboutme">关于我</a>
+            <a href="https://status.jipai.moe" class="disabled">平台状态</a>
+        </nav>
+        <p>©2018「JiPai Store」製作委員会</p>
+    </footer>
     </div>
     <script>
-        var app =new Vue(
-                {
-                    el:'.timeline',
-                    data:{
-                        invisible:true
-                    }
-                }
-            )
+
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101983219-1"></script>
