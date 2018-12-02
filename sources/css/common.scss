@@ -1,0 +1,190 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+//@import "compass/reset";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+$battery_font_blue:#83a2c5;
+$battery_font_gray:#666666;
+@import url(https://fonts.loli.net/earlyaccess/notosansscsliced.css);
+@import url('https://fonts.loli.net/css?family=Quicksand:300,400,500');
+@import url(https://fonts.loli.net/earlyaccess/notosansjapanese.css);
+body {
+	/**/
+	background-color: rgba(244, 244, 244, 1);
+	font-size: 17px;
+    font-family: 'Quicksand','Noto Sans SC Sliced','Noto Sans Japanese', "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+	color: $battery_font_gray;
+}
+
+a:hover,
+a:focus,
+a:active {
+	text-decoration: none;
+	color: $battery_font_blue;
+}
+
+//下面准备了一些小样式，比如隐藏啊，禁用啊，下划线啊这种东西。
+.disabled {
+	pointer-events: none;
+}
+
+.dashed {
+	padding-bottom: 2px;
+	background: linear-gradient(to right, currentColor, currentColor 4px, transparent 4px) repeat-x 0 bottom/7px 1px;
+}
+
+.invisible {
+	display: none;
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 30px;
+	transform: translate(-50%, -50%);
+	width: 50vmin;
+	height: 80vmin;
+	border-radius: 0px;
+	text-align: center;
+	background-color: white;
+	box-shadow: 0px 3px 10px 0px rgba(183, 183, 183, 0.4);
+	overflow: hidden;
+}
+
+header {
+	text-align: left;
+}
+
+header+hr {
+	margin: 15px 0px 15px 0px; // background-color:$battery_font_gray;
+	// border:1px solid $battery_font_gray;
+}
+
+.site-title {
+	text-align: left;
+	display: inline-block;
+	position: relative;
+	color: $battery_font_blue;
+	h3 {
+		font-size: 60px;
+		display: inline-block;
+	}
+	h5 {
+		font-size: 25px;
+		display: inline-block;
+		position: absolute;
+		top: 30px;
+		right: 6px; //color:$battery_font_gray;
+	}
+}
+
+
+
+.site-title p {
+	letter-spacing: 5px;
+}
+
+
+nav {
+	font-size: 15px;
+	color:$battery_font_gray;
+	a:nth-child(n+2)::before {
+		content: "/";
+		padding: 0px 5px 0px 0px;
+		color: rgb(195, 195, 195);
+	}
+	;
+}
+
+.content {
+	color: $battery_font_gray;
+	height: 70%;
+}
+
+.timeline {
+	height: 100%;
+	p {
+		position: relative;
+		top: 50%;
+	}
+}
+
+.aboutme {
+	font-size: 15px;
+	padding: 20px;
+	margin-top: 10px;
+	display: block;
+	text-align: right;
+	line-height: 30px;
+	height: 90%;
+	overflow: overlay;
+}
+
+.aboutme::-webkit-scrollbar {
+	display: none;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	margin-left: -30px;
+}
+
+footer p {
+	font-size: 12px;
+	padding: 12px;
+	color: $battery_font_blue;
+}

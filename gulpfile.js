@@ -4,25 +4,19 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     browserSync = require("browser-sync").create();
 
-gulp.task('sass', function () {
-    gulp.src('./sources/css/sass/*.scss')
+gulp.task('html', function () {
+    gulp.src('./*.html')
+        .pipe(gulp.dest('./dist'));
+});
+gulp.task('css', function () {
+    gulp.src('./sources/css/*.scss')
         .pipe(sass({ outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(gulp.dest('./sources/css/stylesheets/'));
-});
-gulp.task('sass-lab', function () {
-    gulp.src('./lab/sources/css/sass/*.scss')
-        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-        .pipe(gulp.dest('./lab/sources/css/stylesheets/'));
-});
-gulp.task('sass-bgm', function () {
-    gulp.src('./bgm/sources/css/sass/*.scss')
-        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-        .pipe(gulp.dest('./bgm/sources/css/stylesheets/'));
+        .pipe(gulp.dest('./dist/sources/css/'));
 });
 gulp.task('serve', function (done) {
     browserSync.init({
         server: {
-            baseDir: './',
+            baseDir: './dist',
             serveStaticOptions: {
                 extensions: ['html'] // pretty urls
             }
@@ -31,21 +25,11 @@ gulp.task('serve', function (done) {
     });
     done();
 });
-gulp.task('dev', ['sass', 'serve'], function (cb) {
-    //gulp.watch('./sources/**/*.js', ['scripts']);
-    //gulp.watch('./**/*.html', ['html']);
-    //下面是index用的配置
-    gulp.watch('./sources/css/sass/*.scss', ['sass']);
-    gulp.watch('./*.html', ['reload']);
+gulp.task('dev', ['html','css', 'serve'], function (cb) {
+    gulp.watch('./sources/css/*.scss', ['css']);
+    gulp.watch('./*.html', ['html']);
     gulp.watch('./sources/css/sass/*.scss', ['reload']);
-    //下面是lab用的配置 
-    gulp.watch('./lab/sources/css/sass/*.scss', ['sass-lab']);
-    gulp.watch('./lab/*.html', ['reload']);
-    gulp.watch('./lab/sources/css/sass/*.scss', ['reload']);
-    //下面是bgm用的配置
-    gulp.watch('./bgm/sources/css/sass/*.scss', ['sass-bgm']);
-    gulp.watch('./bgm/*.html', ['reload']);
-    gulp.watch('./bgm/sources/css/sass/*.scss', ['reload']);
+    gulp.watch('./*.html', ['reload']);
 });
 
 gulp.task('reload', function (done) {
