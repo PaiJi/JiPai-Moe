@@ -28,7 +28,7 @@ gulp.task('serve', function (done) {
 gulp.task('dev', ['html','css', 'serve'], function (cb) {
     gulp.watch('./sources/css/*.scss', ['css']);
     gulp.watch('./*.html', ['html']);
-    gulp.watch('./sources/css/sass/*.scss', ['reload']);
+    gulp.watch('./sources/css/*.scss', ['reload']);
     gulp.watch('./*.html', ['reload']);
 });
 

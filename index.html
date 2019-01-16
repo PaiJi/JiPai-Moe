@@ -14,53 +14,59 @@
 
 <body>
     <div class="container" id='app'>
-        <header>
-            <div class="site-title">
-                <h3>JiPai</h3>
-                <h5>Store</h5>
-                <p>一个存放故事的地方</p>
+        <div v-if="true">
+            <header>
+                <div class="site-title">
+                    <h3>JiPai</h3>
+                    <h5>Store</h5>
+                    <p>一个存放故事的地方</p>
+                </div>
+            </header>
+            <hr>
+            <nav>
+                <a href="#" v-on:click="whoIsShow='timeline'">最近</a>
+                <a href="https://blog.jipai.moe">日记</a>
+                <a href="https://lab.jipai.moe">研发部</a>
+                <a href="#" v-on:click="whoIsShow='friends'">伙伴们</a>
+                <a href="#" v-on:click="whoIsShow='aboutme'">关于我</a>
+                <a href="https://status.jipai.moe">运行状态</a>
+            </nav>
+            <div class="content">
+                <div id="timeline" v-if="whoIsShow=='timeline'">
+                    <p>时间轴功能正在开发中</p>
+                </div>
+                <div class="aboutme" v-if="whoIsShow=='aboutme'">
+                    <p>95后，真实大龄肥宅。</p>
+                    <p>养鸽协会终身会员，先鸽后肝，不行装死。</p>
+                    <p>三分钟热度，目前还挂在年度目标上的有：<br><span class="dashed">前端进阶</span>，考过<span class="dashed">英语六级</span>AND<span
+                            class="dashed">日语N5</span>，<span class="dashed">画画入门</span>。<br>以上目标，统统没有实现。</p>
+                    <br>
+                    <h5>你也可以在这里找到我</h5>
+                    <a href="https://twitter.com/jipairamen">Twitter</a>
+                    <a href="http://bgm.tv/user/338144">Bangumi</a>
+                    <a href="https://www.instagram.com/jipai16/">Instagram</a>
+                    <br><br>
+                    <h5>我最近喜欢看啥</h5>
+                    <p>
+                        <a href="http://bgm.tv/subject/226540">·魔法禁书目录Ⅲ</a>
+                        <a href="http://bgm.tv/subject/225604">·刀剑神域Alicization</a>
+                        <a href="http://bgm.tv/subject/262543">·0号宿舍</a>
+                        <a href="http://bgm.tv/subject/238006">哥布林杀手</a>
+                        <a href="http://bgm.tv/subject/234059">·火之丸相扑</a>
+                    </p>
+                    <br>
+                    <h5>我最近在玩的游戏</h5>
+                    <p><a href="https://www.craft.moe/">·MineCraft·毛玉線圈物語</a> ·城市天际线 ·缺氧 ·双点医院</p>
+                </div>
             </div>
-        </header>
-        <hr>
-        <nav>
-            <a href="#" v-on:click="whoIsShow='timeline'">最近</a>
-            <a href="https://blog.jipai.moe">日记</a>
-            <a href="https://lab.jipai.moe">研发部</a>
-            <a href="#" v-on:click="whoIsShow='friends'">伙伴们</a>
-            <a href="#" v-on:click="whoIsShow='aboutme'">关于我</a>
-            <a href="https://status.jipai.moe">运行状态</a>
-        </nav>
-        <div class="content">
-            <div id="timeline" v-if="whoIsShow=='timeline'">
-                <p>时间轴功能正在开发中</p>
-            </div>
-            <div class="aboutme" v-if="whoIsShow=='aboutme'">
-                <p>95后，真实大龄肥宅。</p>
-                <p>养鸽协会终身会员，先鸽后肝，不行装死。</p>
-                <p>三分钟热度，目前还挂在年度目标上的有：<br><span class="dashed">前端进阶</span>，考过<span class="dashed">英语六级</span>AND<span
-                        class="dashed">日语N5</span>，<span class="dashed">画画入门</span>。<br>以上目标，统统没有实现。</p>
-                <br>
-                <h5>你也可以在这里找到我</h5>
-                <a href="https://twitter.com/jipairamen">Twitter</a>
-                <a href="http://bgm.tv/user/338144">Bangumi</a>
-                <a href="https://www.instagram.com/jipai16/">Instagram</a>
-                <br><br>
-                <h5>我最近喜欢看啥</h5>
-                <p>
-                    <a href="http://bgm.tv/subject/226540">·魔法禁书目录Ⅲ</a>
-                    <a href="http://bgm.tv/subject/225604">·刀剑神域Alicization</a>
-                    <a href="http://bgm.tv/subject/262543">·0号宿舍</a>
-                    <a href="http://bgm.tv/subject/238006">哥布林杀手</a>
-                    <a href="http://bgm.tv/subject/234059">·火之丸相扑</a>
-                </p>
-                <br>
-                <h5>我最近在玩的游戏</h5>
-                <p><a href="https://www.craft.moe/">·MineCraft·毛玉線圈物語</a> ·城市天际线 ·缺氧 ·双点医院</p>
-            </div>
+            <footer>
+                <p>©2019「JiPai·Store」製作委員会</p>
+            </footer>
         </div>
-        <footer>
-            <p>©2018「JiPai·Store」製作委員会</p>
-        </footer>
+        <section v-if="false">
+            <div class="magane-content"><span>生命之光终将照耀地平线。</span></div>
+            <div class="magane-author"><span>出自·毛线球物语Minecraft凤凰十字弓Slogan</span></div>
+        </section>
     </div>
     <script>
         var app = new Vue({
