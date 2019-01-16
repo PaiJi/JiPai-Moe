@@ -6,73 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="sources/css/common.css">
-    <script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.loli.net/ajax/libs/vue/2.5.9/vue.js"></script>
+    <script src="https://cdnjs.loli.net/ajax/libs/vue/2.5.22/vue.js"></script>
     <title>鸡排 / JiPai — 光るなら</title>
-    <meta name="description" content="这是JiPai存放故事的地方，欢迎来参观。">
+    <meta name="description" content="欢迎光临JiPai Story门店，いらっしゃいませ！">
 </head>
 
 <body>
-    <div class="container" id='app'>
-        <div v-if="true">
-            <header>
-                <div class="site-title">
-                    <h3>JiPai</h3>
-                    <h5>Store</h5>
-                    <p>一个存放故事的地方</p>
-                </div>
-            </header>
-            <hr>
-            <nav>
-                <a href="#" v-on:click="whoIsShow='timeline'">最近</a>
-                <a href="https://blog.jipai.moe">日记</a>
-                <a href="https://lab.jipai.moe">研发部</a>
-                <a href="#" v-on:click="whoIsShow='friends'">伙伴们</a>
-                <a href="#" v-on:click="whoIsShow='aboutme'">关于我</a>
-                <a href="https://status.jipai.moe">运行状态</a>
-            </nav>
-            <div class="content">
-                <div id="timeline" v-if="whoIsShow=='timeline'">
-                    <p>时间轴功能正在开发中</p>
-                </div>
-                <div class="aboutme" v-if="whoIsShow=='aboutme'">
-                    <p>95后，真实大龄肥宅。</p>
-                    <p>养鸽协会终身会员，先鸽后肝，不行装死。</p>
-                    <p>三分钟热度，目前还挂在年度目标上的有：<br><span class="dashed">前端进阶</span>，考过<span class="dashed">英语六级</span>AND<span
-                            class="dashed">日语N5</span>，<span class="dashed">画画入门</span>。<br>以上目标，统统没有实现。</p>
-                    <br>
-                    <h5>你也可以在这里找到我</h5>
-                    <a href="https://twitter.com/jipairamen">Twitter</a>
-                    <a href="http://bgm.tv/user/338144">Bangumi</a>
-                    <a href="https://www.instagram.com/jipai16/">Instagram</a>
-                    <br><br>
-                    <h5>我最近喜欢看啥</h5>
-                    <p>
-                        <a href="http://bgm.tv/subject/226540">·魔法禁书目录Ⅲ</a>
-                        <a href="http://bgm.tv/subject/225604">·刀剑神域Alicization</a>
-                        <a href="http://bgm.tv/subject/262543">·0号宿舍</a>
-                        <a href="http://bgm.tv/subject/238006">哥布林杀手</a>
-                        <a href="http://bgm.tv/subject/234059">·火之丸相扑</a>
-                    </p>
-                    <br>
-                    <h5>我最近在玩的游戏</h5>
-                    <p><a href="https://www.craft.moe/">·MineCraft·毛玉線圈物語</a> ·城市天际线 ·缺氧 ·双点医院</p>
-                </div>
+    <div class="page" id='app'>
+        <header class="container">
+            <div class="site-title" v-on:click="whoIsShow='slogan'">
+                <img src="data:image/png;base64,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">
+                <h3>JiPai</h3>
+                <h5>Store</h5>
+                <p>一个有故事的地方</p>
             </div>
-            <footer>
-                <p>©2019「JiPai·Store」製作委員会</p>
-            </footer>
+            <nav>
+                <a href="#" v-on:click="whoIsShow='timeline'" v-bind:class="{nav_focus:whoIsShow=='timeline'}">抓鸽子</a>
+                <a href="#" v-on:click="whoIsShow='aboutme'" v-bind:class="{nav_focus:whoIsShow=='aboutme'}">配料表</a>
+                <a target="_blank" href="https://lab.jipai.moe">研发</a>
+                <a href="#" v-on:click="whoIsShow='friends'" v-bind:class="{nav_focus:whoIsShow=='friends'}">友商</a>
+                <a target="_blank" href="https://blog.jipai.moe">日志</a>
+                <a target="_blank" href="https://status.jipai.moe">车间状态</a>
+            </nav>
+        </header>
+        <div v-show="whoIsShow=='slogan'">
+            <section class="container swiper">
+
+            </section>
+            <section class="container slogan">
+                <div class="slogan-content">
+                    <h3>生命之光终将照耀地平线。</h3>
+                </div>
+                <span>来自·毛玉線圈物語Minecraft</span>
+            </section>
         </div>
-        <section v-if="false">
-            <div class="magane-content"><span>生命之光终将照耀地平线。</span></div>
-            <div class="magane-author"><span>出自·毛线球物语Minecraft凤凰十字弓Slogan</span></div>
-        </section>
+
+        <div class="container aboutme" v-show="whoIsShow=='aboutme'">
+            <p>95后，真实大龄肥宅。</p>
+            <p>养鸽协会终身会员，先鸽后肝，不行装死。</p>
+            <p>三分钟热度，目前还挂在年度目标上的有：<br><span class="dashed">前端进阶</span>，考过<span class="dashed">英语六级</span>AND<span class="dashed">日语N5</span>，<span
+                    class="dashed">画画入门</span>。<br>以上目标，统统没有实现。
+            </p>
+            <p>喜欢种菜或者包含种菜元素的游戏，包括星露谷物语，Starbound，Minecraft，在此类游戏中，鸡排的房子都是很丑陋的火柴盒，可以说毫无建筑天赋了。
+            </p>
+            <p>最爱的奶茶品牌按价格排序分别是 蜜雪冰城，COCO，鲜果时间，喜茶。</p>
+            <p>在卤味食品分类下，鸡排最喜欢的是绝味鸭脖系列的鸭心。</p>
+            <p>在炸鸡品牌中，鸡排独爱德克士。</p>
+            <p>吃薯条的时候其实不是很在意是否有番茄酱。</p>
+            <p>18年左右疯狂的爱吃日式拉面，不是那种清淡的拉面，是浓厚的背脂拉面，曾经认真考虑要不要改名叫拉面。</p>
+            <p>谷歌全家桶住户，在迈进米家全家桶的门口试探。</p>
+            <p>积分爱好者，热衷于各种积分，比如罗森便利店会员积分，信用卡积分，支付宝积分，京东积分，Ticktick积分......</p>
+
+            <br>
+            <h5>你也可以在这里找到我</h5>
+            <a target="_blank" href="https://twitter.com/jipairamen">Twitter</a>
+            <a target="_blank" href="http://bgm.tv/user/338144">Bangumi</a>
+            <a target="_blank" href="https://www.instagram.com/jipai16/">Instagram</a>
+            <br><br>
+            <h5>我最近喜欢看啥</h5>
+            <p>
+                <a target="_blank" href="http://bgm.tv/subject/226540">灵能百分百</a>
+                <a target="_blank" href="http://bgm.tv/subject/226540">·魔法禁书目录Ⅲ</a>
+                <a target="_blank" href="http://bgm.tv/subject/225604">·刀剑神域Alicization</a>
+                <a target="_blank" href="http://bgm.tv/subject/262543">·0号宿舍</a>
+                <a target="_blank" href="http://bgm.tv/subject/238006">哥布林杀手</a>
+                <a target="_blank" href="http://bgm.tv/subject/234059">·火之丸相扑</a>
+            </p>
+            <br>
+            <h5>我最近在玩的游戏</h5>
+            <p><a href="https://www.craft.moe/">·MineCraft·毛玉線圈物語</a> ·城市天际线 ·缺氧 ·双点医院</p>
+        </div>
+        <div class="container timeline" v-show="whoIsShow=='timeline'">
+            <p>时间轴正在开发中,请点击抓鸽子选项发现鸡排的最新动态然后督促他去学习！啊不好意思，这就是抓鸽子选项......</p>
+        </div>
+        <div v-show="whoIsShow=='friends'">
+            <section class="container">
+
+            </section>
+        </div>
+        <footer class="container">
+            <p>©2019「JiPai·Store」製作委員会 系统版本4.0.0 beta·车间已连续运作时间{{upDays}}天·{{visitorNum}}名顾客光临本门店</p>
+            <!-- <a href="https://icons8.com/icon/82478/fried-chicken">Fried Chicken icon by Icons8</a> -->
+        </footer>
+    </div>
+
     </div>
     <script>
         var app = new Vue({
             el: '#app',
             data: {
-                whoIsShow: 'aboutme'
+                whoIsShow: 'slogan',
+                upDays: "",
+                visitorNum: ""
             }
         })
     </script>
