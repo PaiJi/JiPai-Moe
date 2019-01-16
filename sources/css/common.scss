@@ -4,19 +4,87 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 //@import "compass/reset";
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -24,25 +92,44 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -50,24 +137,26 @@ table {
 
 $battery_font_blue:#83a2c5;
 $battery_font_gray:#666666;
-@import url(https://fonts.loli.net/earlyaccess/notosansscsliced.css);
-@import url('https://fonts.loli.net/css?family=Quicksand:300,400,500');
-@import url(https://fonts.loli.net/earlyaccess/notosansjapanese.css);
+//@import url('https://fonts.loli.net/css?family=Quicksand:300,400,500');
+//@import url('https://fonts.loli.net/css?family=Noto+Sans+SC');
+@import url('https://fonts.loli.net/css?family=Noto+Sans+SC:400,700|Quicksand&subset=chinese-simplified');
+
 body {
 	/**/
 	background-color: rgba(244, 244, 244, 1);
 	font-size: 17px;
-    font-family: 'Quicksand','Noto Sans SC Sliced','Noto Sans Japanese', "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+	font-family: 'Quicksand', 'Noto Sans SC', "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
 }
 
 a:link,
-a:visited {
+a:visited,
+a:focus {
 	text-decoration: none;
 	color: $battery_font_gray;
 }
 
 a:hover,
-a:focus,
+
 a:active {
 	text-decoration: none;
 	color: $battery_font_blue;
@@ -87,24 +176,52 @@ a:active {
 	display: none;
 }
 
+/*自定义小样式结束*/
+/*全局字体大小定义*/
+html {
+	font-size: 62.5%;
+	/* set 1em = 10px; */
+}
+
+body {
+	font-size: 1.4em;
+	/* initial font-size: 14px; */
+}
+
+/**/
+.page {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
 .container {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	padding: 30px;
-	transform: translate(-50%, -50%);
+	padding: 30px 0px;
+	// position: absolute;
+	// top: 50%;
+	// left: 50%;
+	//padding: 30px;
+	//transform: translate(-50%, -50%);
 	//swidth: 50vmin;
-	min-width: 80vmin;
+	//min-width: 80vmin;
 	//height: 80vmin;
 	border-radius: 0px;
-	text-align: center;
+	//text-align: center;
+	//background-color: white;
+	//overflow: hidden;
+}
+
+.box-shadow {
+	box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.bg-white {
 	background-color: white;
-	box-shadow: 0px 3px 10px 0px rgba(183, 183, 183, 0.4);
-	overflow: hidden;
 }
 
 header {
-	text-align: left;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
 }
 
 header+hr {
@@ -115,37 +232,62 @@ header+hr {
 .site-title {
 	text-align: left;
 	display: inline-block;
-	position: relative;
 	color: $battery_font_blue;
+	cursor: pointer;
+
 	h3 {
-		font-size: 60px;
+		font-size: 4em;
 		display: inline-block;
 	}
+
+	img {
+		vertical-align: bottom;
+	}
+
 	h5 {
-		font-size: 25px;
+		font-size: 2em;
 		display: inline-block;
-		position: absolute;
-		top: 30px;
-		right: 6px; //color:$battery_font_gray;
+		//position: absolute;
+		//top: 30px;
+		//right: 6px; //color:$battery_font_gray;
+	}
+
+	p {
+		text-align-last: justify;
 	}
 }
-
-
-
-.site-title p {
-	letter-spacing: 5px;
-}
-
 
 nav {
-	font-size: 15px;
-	color:$battery_font_gray;
-	a:nth-child(n+2)::before {
+	font-size: 1.8em;
+	font-weight: bold;
+	color: #666666;
+	//padding: 30px 0px;
+	/*a:nth-child(n+2)::before {
 		content: "/";
 		padding: 0px 5px 0px 0px;
 		color: rgb(195, 195, 195);
+	};*/
+
+	a {
+		margin-left: 5px;
+		position: relative;
 	}
-	;
+
+	.nav_focus {
+		color: $battery_font_blue;
+	}
+
+	.nav_focus::after {
+		content: "";
+		display: block;
+		width: 80%;
+		height: 20px;
+		position: absolute;
+		right: -10%;
+		top: 50%;
+		z-index: -12450;
+		background-color: rgba(229, 238, 248, 1);
+	}
 }
 
 .content {
@@ -153,8 +295,41 @@ nav {
 	height: 70%;
 }
 
+.swiper {
+	width: 100%;
+	height: 500px;
+	background-image: url(http://qcloud-cdn-static.lonepixel.cn/blog/2018_12_31_kedama.webp);
+	background-size: cover;
+	//background-position: 80%;
+}
+
+.slogan {
+	text-align: right;
+	padding: 30px 0px;
+
+	.slogan-content {
+		text-align: center;
+
+		h3 {
+			font-size: 2.5em;
+			font-weight: bold;
+			color: #666666;
+			text-align: left;
+			display: inline;
+			letter-spacing: 0.3em;
+		}
+
+		margin-bottom:1em;
+	}
+
+	span {
+		color: rgba(102, 102, 102, 0.73);
+	}
+}
+
 .timeline {
 	height: 100%;
+
 	p {
 		position: relative;
 		top: 50%;
@@ -162,13 +337,11 @@ nav {
 }
 
 .aboutme {
-	font-size: 15px;
-	padding: 20px;
-	margin-top: 10px;
+	font-size: 1em;
+	//padding: 20px;
+	color: $battery_font_gray;
 	display: block;
-	text-align: right;
 	line-height: 30px;
-	height: 90%;
 	overflow: overlay;
 }
 
@@ -177,28 +350,31 @@ nav {
 }
 
 footer {
-	position: absolute;
-	bottom: 0;
-	text-align: center;
+	//position: absolute;
+	//bottom: 0;
+	text-align: right;
 	width: 100%;
-	margin-left: -30px;
+
+	//margin-left: -30px;
+	p,a{
+		font-size: 12px;
+		color: $battery_font_blue;
+	}
 }
 
-footer p {
-	font-size: 12px;
-	padding: 12px;
-	color: $battery_font_blue;
-}
-.magane-content{
-	padding:10px;
-	span{
-		color:$battery_font_gray;
+.magane-content {
+	padding: 10px;
+
+	span {
+		color: $battery_font_gray;
 		font-size: 1.1em;
 	}
 }
-.magane-author{
+
+.magane-author {
 	text-align: right;
-	span{
-		font-size:0.8em;
+
+	span {
+		font-size: 0.8em;
 	}
 }
