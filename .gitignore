@@ -11,5 +11,7 @@ yarn-error.log
 /node_modules
 #VScode config
 .vscode
-
+#dist
 dist
+#IDE
+.idea
