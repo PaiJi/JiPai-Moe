@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+SC:wght@400;500;700;900|Quicksand&subset=chinese-simplified");
+body {
+  background-color: #f4f4f4;
+  font-family: "Quicksand", "Noto Sans SC", "Helvetica Neue", Helvetica, Arial,
+    "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei",
+    sans-serif;
+}
+
+// .shadow {
+//   box-shadow: 1px 1px 4px 0px #000000 10%;
+// }
+
+.nav-active::after {
+  position: absolute;
+  content: "";
+  right: -5px;
+  bottom: 0px;
+  width: 80%;
+  height: 50%;
+  z-index: -1;
+  background-color: #e5eef8;
+}
+
+.dashed {
+  padding-bottom: 2px;
+  background: linear-gradient(
+      to right,
+      currentColor,
+      currentColor 4px,
+      transparent 4px
+    )
+    repeat-x 0 bottom/7px 1px;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.page-about{
+  p{
+    margin:5px 0px 5px 0px;
+  }
+}

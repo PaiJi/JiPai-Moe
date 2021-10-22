@@ -1,0 +1,35 @@
+{
+  "friends": [
+    {
+      "name": "泷涯",
+      "intro": "地表最强膜法师。",
+      "avatar": "https://flag.moe/source/p/sylingd.jpg",
+      "url": "https://blog.sylingd.com/"
+    },
+    {
+      "name": "Nekotora",
+      "intro": "蘑菇之森中的白笛。",
+      "avatar": "https://blog.flag.moe/usr/themes/Azumarill/img/avatar.png",
+      "url": "https://flag.moe/"
+    },
+    {
+      "name": "派兹的小站",
+      "intro": "地球人。",
+      "avatar": "https://flag.moe/source/p/blingwang.jpg",
+      "url": "https://blog.blw.moe/"
+    }
+  ],
+  "following": [
+    {
+      "name": "🍮布丁",
+      "intro": "摸了，谢谢所有的🐟。",
+      "avatar": "",
+      "url": "https://prin.pw/"
+    },{
+      "name":"Sukka",
+      "intro":"",
+      "avatar":"https://cdn.jsdelivr.net/npm/skx@0.0.1/avatar/128x128.png",
+      "url":"https://skk.moe/"
+    }
+  ]
+}
