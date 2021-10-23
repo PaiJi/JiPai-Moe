@@ -55,3 +55,25 @@ body {
     margin:5px 0px 5px 0px;
   }
 }
+
+.index-swiper{
+  height: 600px;
+}
+
+.friend-item{
+  .friend-item-slogan{
+    opacity: 0;
+    max-height: 0px;
+    overflow: hidden;
+  }
+  &:hover .friend-slogan-display{
+    opacity: 0;
+    max-height:0px;
+    overflow: hidden;
+  }
+
+  &:hover .friend-item-slogan{
+    opacity: 1;
+    max-height: unset;
+  }
+}
