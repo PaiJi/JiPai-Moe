@@ -2,7 +2,7 @@
   "name": "jipai-index",
   "private": true,
   "description": "jipai's main website,build by gatsby",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
@@ -42,9 +42,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/PaiJi/JiPai-Moe"
   }
 }
