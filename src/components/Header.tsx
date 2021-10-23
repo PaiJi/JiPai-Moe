@@ -39,12 +39,11 @@ const Header: React.FC = () => {
       <div className="flex items-end">
         <Link
           to="/"
-          className="text-primary text-6xl font-black mr-2"
-          style={{ lineHeight: "60px" }}
+          className="text-primary text-5xl font-black mr-2"
         >
           JiPai
         </Link>
-        <Link to="/" className="text-primary text-2xl font-bold">
+        <Link to="/" className="text-primary text-5xl font-bold">
           Store
         </Link>
       </div>
@@ -85,6 +84,8 @@ function LinkRender({
     return (
       <a
         href={to}
+        target="_blank"
+        rel="noreferrer"
         className="ml-3 hover:text-primary transition-all duration-200"
       >
         {linkName}

@@ -3,33 +3,50 @@
     {
       "name": "泷涯",
       "intro": "地表最强膜法师。",
+      "slogan":"",
       "avatar": "https://flag.moe/source/p/sylingd.jpg",
       "url": "https://blog.sylingd.com/"
     },
     {
       "name": "Nekotora",
       "intro": "蘑菇之森中的白笛。",
+      "slogan":"",
       "avatar": "https://blog.flag.moe/usr/themes/Azumarill/img/avatar.png",
       "url": "https://flag.moe/"
     },
     {
       "name": "派兹的小站",
-      "intro": "地球人。",
+      "intro": "来自毛线社区的比利王！",
+      "slogan":"地球人。",
       "avatar": "https://flag.moe/source/p/blingwang.jpg",
       "url": "https://blog.blw.moe/"
     }
   ],
   "following": [
     {
-      "name": "🍮布丁",
-      "intro": "摸了，谢谢所有的🐟。",
+      "name": "PRIN 🍮",
+      "slogan":"摸了，谢谢所有的🐟。",
+      "intro": "",
       "avatar": "",
       "url": "https://prin.pw/"
     },{
       "name":"Sukka",
-      "intro":"",
+      "intro":"全能大尾巴苏卡卡！",
+      "slogan":"童话只美在真实却从不续写",
       "avatar":"https://cdn.jsdelivr.net/npm/skx@0.0.1/avatar/128x128.png",
       "url":"https://skk.moe/"
+    },{
+      "name":"Aaron",
+      "intro":"来见见 Cloudreve 背后的作者",
+      "slogan":"",
+      "avatar":"https://blog.aoaoao.me/img/avatar_hu5ed641bee97ad072438520bd62da4433_14788_300x300_resize_box_2.png",
+      "url":"https://blog.aoaoao.me/"
+    },{
+      "name":"JimmyCai",
+      "intro":"简约也是一种美",
+      "slogan":"",
+      "avatar":"https://res.cloudinary.com/jimmycai/image/upload/c_scale,f_auto,w_100/avatar.png",
+      "url":"https://jimmycai.com/"
     }
   ]
 }

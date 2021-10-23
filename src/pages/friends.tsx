@@ -1,3 +1,4 @@
+import classNames from "classnames"
 import React, { useEffect, useState } from "react"
 import friendsJson from "../../content/friends.json"
 export default function Friends() {
@@ -40,15 +41,15 @@ export default function Friends() {
   )
 }
 
-function FriendRender(
-  list: { name: string; avatar: string; intro: string; url: string }[]
-) {
+function FriendRender(list: typeof friendsJson.friends) {
   return (
     <>
       {list.map(friend => (
         <a
           className="friend-item inline-block bg-white rounded-lg transition duration-200 p-2 flex items-center transform hover:-translate-y-2"
           key={friend.name}
+          target="_blank"
+          rel="noreferrer"
           href={friend.url}
         >
           {friend.avatar ? (
@@ -61,7 +62,21 @@ function FriendRender(
             <h2 className="font-bold text-xl text-dark-666 mb-2">
               {friend.name}
             </h2>
-            <p className="text-dark-666 text-sm">{friend.intro}</p>
+            <p
+              className={classNames(
+                "friend-item-default-intro text-dark-666 text-sm transition duration-400",
+                {
+                  "friend-slogan-display": friend.intro && friend.slogan,
+                }
+              )}
+            >
+              {friend.intro || friend.slogan}
+            </p>
+            {friend.intro && friend.slogan ? (
+              <p className="friend-item-slogan text-dark-666 text-sm transition duration-400">
+                {friend.slogan}
+              </p>
+            ) : null}
           </div>
         </a>
       ))}
