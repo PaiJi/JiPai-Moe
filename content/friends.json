@@ -3,21 +3,21 @@
     {
       "name": "泷涯",
       "intro": "地表最强膜法师。",
-      "slogan":"",
+      "slogan": "",
       "avatar": "https://flag.moe/source/p/sylingd.jpg",
       "url": "https://blog.sylingd.com/"
     },
     {
       "name": "Nekotora",
       "intro": "蘑菇之森中的白笛。",
-      "slogan":"",
+      "slogan": "",
       "avatar": "https://blog.flag.moe/usr/themes/Azumarill/img/avatar.png",
       "url": "https://flag.moe/"
     },
     {
       "name": "派兹的小站",
       "intro": "来自毛线社区的比利王！",
-      "slogan":"地球人。",
+      "slogan": "地球人。",
       "avatar": "https://flag.moe/source/p/blingwang.jpg",
       "url": "https://blog.blw.moe/"
     }
@@ -25,28 +25,73 @@
   "following": [
     {
       "name": "PRIN 🍮",
-      "slogan":"摸了，谢谢所有的🐟。",
+      "slogan": "摸了，谢谢所有的🐟。",
       "intro": "",
       "avatar": "",
       "url": "https://prin.pw/"
-    },{
-      "name":"Sukka",
-      "intro":"全能大尾巴苏卡卡！",
-      "slogan":"童话只美在真实却从不续写",
-      "avatar":"https://cdn.jsdelivr.net/npm/skx@0.0.1/avatar/128x128.png",
-      "url":"https://skk.moe/"
-    },{
-      "name":"Aaron",
-      "intro":"来见见 Cloudreve 背后的作者",
-      "slogan":"",
-      "avatar":"https://blog.aoaoao.me/img/avatar_hu5ed641bee97ad072438520bd62da4433_14788_300x300_resize_box_2.png",
-      "url":"https://blog.aoaoao.me/"
-    },{
-      "name":"JimmyCai",
-      "intro":"简约也是一种美",
-      "slogan":"",
-      "avatar":"https://res.cloudinary.com/jimmycai/image/upload/c_scale,f_auto,w_100/avatar.png",
-      "url":"https://jimmycai.com/"
+    },
+    {
+      "name": "Sukka",
+      "intro": "全能大尾巴苏卡卡！",
+      "slogan": "童话只美在真实却从不续写",
+      "avatar": "https://cdn.jsdelivr.net/npm/skx@0.0.1/avatar/128x128.png",
+      "url": "https://skk.moe/"
+    },
+    {
+      "name": "Aaron",
+      "intro": "来见见 Cloudreve 背后的作者",
+      "slogan": "",
+      "avatar": "https://blog.aoaoao.me/img/avatar_hu5ed641bee97ad072438520bd62da4433_14788_300x300_resize_box_2.png",
+      "url": "https://blog.aoaoao.me/"
+    },
+    {
+      "name": "JimmyCai",
+      "intro": "简约也是一种美",
+      "slogan": "",
+      "avatar": "https://res.cloudinary.com/jimmycai/image/upload/c_scale,f_auto,w_100/avatar.png",
+      "url": "https://jimmycai.com/"
+    },
+    {
+      "name": "toby",
+      "intro": "",
+      "slogan": "一个高尚的人，一个纯粹的人，一个有道德的人，一个脱离了低级趣味的人，一个有益于人民的人。",
+      "avatar": "https://toby.moe/favicon.png",
+      "url": "https://toby.moe/"
+    },
+    {
+      "name": "愤怒的泡面",
+      "intro": "",
+      "slogan": "愤怒的泡面，90后",
+      "avatar": "https://powman.org/images/avatar.png",
+      "url": "https://powman.org/"
+    },
+    {
+      "name": "超能小紫 mokeyjay",
+      "intro": "",
+      "slogan": "Web 全沾 // 专业学渣 // 贰刺猿 // 永远还不完信用卡",
+      "avatar": "https://www.mokeyjay.com/headimg.png",
+      "url": "https://www.mokeyjay.com/"
+    },
+    {
+      "name": "John Chou",
+      "intro": "",
+      "slogan": "Stand high, think different.",
+      "avatar": "https://blog.joouis.com/images/avatar.jpg",
+      "url": "https://blog.joouis.com/"
+    },
+    {
+      "name": "chawyehsu",
+      "intro": "",
+      "slogan": "被社会毒打青年。",
+      "avatar": "https://chawyehsu.com/_saber/images/icons/logo_512.svg",
+      "url": "https://chawyehsu.com/"
+    },
+    {
+      "name": "抛瓦林",
+      "intro": "什么都写点",
+      "slogan": "",
+      "avatar": "https://avatars.githubusercontent.com/u/13746617?v=4",
+      "url": "https://wiki-power.com/"
     }
   ]
 }

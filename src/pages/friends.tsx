@@ -37,6 +37,10 @@ export default function Friends() {
           {friends?.following && FriendRender(friends?.following)}
         </ul>
       </section>
+
+      <section className="my-8 flex justify-center">
+        <span className="text-gray-500 text-base">写给那些在互联网上留下过痕迹，如今却不知身处何方的人儿——谢谢你们。</span>
+      </section>
     </main>
   )
 }
@@ -58,13 +62,13 @@ function FriendRender(list: typeof friendsJson.friends) {
             <div className="rounded-full w-16 h-16 bg-gray-300"></div>
           )}
 
-          <div className="ml-4 px-2 py-2">
+          <div className="ml-4 px-2 py-2 truncate ">
             <h2 className="font-bold text-xl text-dark-666 mb-2">
               {friend.name}
             </h2>
             <p
               className={classNames(
-                "friend-item-default-intro text-dark-666 text-sm transition duration-400",
+                "friend-item-default-intro text-dark-666 text-sm transition duration-400 truncate",
                 {
                   "friend-slogan-display": friend.intro && friend.slogan,
                 }
