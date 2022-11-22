@@ -10,36 +10,37 @@ export default function Friends() {
 
   return (
     <main className="my-5">
-      <section className="my-4">
-        <div className="flex justify-between items-baseline mb-4 ">
+      <section className="my-8">
+        <div className="items-baseline mb-4 ">
           <h2 className="text-2xl text-primary border-b-4 inline-block pb-1">
             朋友们
           </h2>
-          <span className="text-sm text-gray-500 block">谢谢你们曾经来过</span>
+          <p className="text-sm text-gray-500 block mt-4 mb-8">这里是鸡排在现实/游戏中认识的朋友们。</p>
         </div>
 
-        <ul className="grid grid-cols-3 gap-5">
+        <ul className="grid md:grid-cols-3 gap-5">
           {friends?.friends && FriendRender(friends?.friends)}
         </ul>
       </section>
 
       <section className="my-8">
-        <div className="flex justify-between items-baseline mb-4">
+        <div className="items-baseline mb-4">
           <h2 className="text-2xl text-primary inline-block border-b-4 pb-1">
-            大佬们
+            有点意思
           </h2>
-          <span className="ml-4 text-sm text-gray-500 block">
-            这些人超👍的，虽然不认识我，但是我相信你也感兴趣！
-          </span>
+          <p className="mt-4 mb-8 text-sm text-gray-500 block">
+            这些是鸡排上网冲浪时觉得超👍的“网友”，虽然他们不认识我，我也偷偷把他们放进这个列表里，希望你也能喜欢。
+          </p>
         </div>
 
-        <ul className="grid grid-cols-3 gap-5">
+        <ul className="grid md:grid-cols-3 gap-5">
           {friends?.following && FriendRender(friends?.following)}
         </ul>
       </section>
 
-      <section className="my-8 flex justify-center">
-        <span className="text-gray-500 text-base">写给那些在互联网上留下过痕迹，如今却不知身处何方的人儿——谢谢你们。</span>
+      <section className="my-8 flex justify-center flex-col items-center">
+        <span className="text-gray-500 text-base text-center">写给那些在互联网上留下过痕迹，如今却不知身处何方的人儿</span>
+        <p  className="text-gray-500 text-lg font-medium">谢谢你，愿你被这世界温柔以待。</p>
       </section>
     </main>
   )
@@ -62,13 +63,13 @@ function FriendRender(list: typeof friendsJson.friends) {
             <div className="rounded-full w-16 h-16 bg-gray-300"></div>
           )}
 
-          <div className="ml-4 px-2 py-2 truncate ">
+          <div className="ml-4 px-2 py-2 md:truncate">
             <h2 className="font-bold text-xl text-dark-666 mb-2">
               {friend.name}
             </h2>
             <p
               className={classNames(
-                "friend-item-default-intro text-dark-666 text-sm transition duration-400 truncate",
+                "friend-item-default-intro text-dark-666 text-sm transition duration-400 md:truncate",
                 {
                   "friend-slogan-display": friend.intro && friend.slogan,
                 }

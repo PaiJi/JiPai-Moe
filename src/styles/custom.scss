@@ -1,9 +1,14 @@
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+SC:wght@400;500;700;900|Quicksand&subset=chinese-simplified");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Rubik&display=swap");
+
 body {
   background-color: #f4f4f4;
-  font-family: "Quicksand", "Noto Sans SC", "Helvetica Neue", Helvetica, Arial,
+  font-family: "Rubik", "Noto Sans SC", "Helvetica Neue", Helvetica, Arial,
     "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei",
     sans-serif;
+  scrollbar-gutter: stable both-edges;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 // .shadow {
@@ -32,48 +37,54 @@ body {
     repeat-x 0 bottom/7px 1px;
 }
 
-html {
-  overflow-y: scroll;
+body.stop-scroll {
+  height: 100vh;
+  overflow-y: hidden;
 }
 
-:root {
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-:root body {
-  position: absolute;
-}
-
-body {
-  width: 100vw;
-  overflow: hidden;
-}
-
-.page-about{
-  p{
-    margin:5px 0px 5px 0px;
+.page-about {
+  p {
+    margin: 5px 0px 5px 0px;
   }
 }
 
-.index-swiper{
-  height: 600px;
+.index-swiper {
+  height: 40vw;
+  max-height: 600px;
 }
 
-.friend-item{
-  .friend-item-slogan{
+.friend-item {
+  .friend-item-slogan {
     opacity: 0;
     max-height: 0px;
     overflow: hidden;
   }
-  &:hover .friend-slogan-display{
+  &:hover .friend-slogan-display {
     opacity: 0;
-    max-height:0px;
+    max-height: 0px;
     overflow: hidden;
   }
 
-  &:hover .friend-item-slogan{
+  &:hover .friend-item-slogan {
     opacity: 1;
     max-height: unset;
+  }
+}
+
+.modal-background--fade-out {
+  animation-duration: 200ms;
+  animation-delay: 200ms;
+  animation-name: modal-bg-fade;
+  animation-fill-mode: forwards;
+}
+
+@keyframes modal-bg-fade {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+    display: none;
   }
 }

@@ -20,7 +20,7 @@ export default function Home() {
         <span className="text-3xl font-bold block text-center text-dark-666 tracking-widest">
           生命之光终将照耀地平线。
         </span>
-        <label className="block text-right text-gray-102">
+        <label className="block text-center md:text-right text-gray-102">
           来自·毛玉線圈物語Minecraft
         </label>
       </section>

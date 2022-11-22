@@ -12,7 +12,7 @@ export default function Layout(props: LayoutProps) {
   return (
     <>
       <SEO />
-      <div className="max-w-screen-lg m-auto mt-8">
+      <div className="max-w-screen-lg m-auto px-8 lg:px-0">
         <Header />
         {children}
         <Footer />
