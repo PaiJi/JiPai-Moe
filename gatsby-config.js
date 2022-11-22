@@ -10,7 +10,7 @@ module.exports = {
     title: "鸡排 / JiPai — 光るなら",
     // titleTemplate: "%s · The Real Hero",
     description:
-      "欢迎光临JiPai Story门店，いらっしゃいませ！",
+      "欢迎光临JiPai Store门店，いらっしゃいませ！",
     url: "https://www.jipai.moe", // No trailing slash allowed!
     image: "/favicon.ico", // Path to your image you placed in the 'static' folder
     twitterUsername: "@jipairamen",
