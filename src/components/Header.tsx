@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react"
-import { Link } from "gatsby"
 import classNames from "classnames"
 import { FiMenu } from "react-icons/fi"
+import Link from "next/link"
 
 const links = [
   {
@@ -159,12 +159,12 @@ function LinkRender({
   if (type === "inSite") {
     return (
       <Link
-        to={to}
+        href={to}
         onClick={onClick}
-        activeClassName={classNames("", {
-          "nav-active text-primary": !isMobile,
-          "bg-primary text-white": isMobile,
-        })}
+        // activeClassName={classNames("", {
+        //   "nav-active text-primary": !isMobile,
+        //   "bg-primary text-white": isMobile,
+        // })}
         className={classNames({
           "relative ml-3 font-bold hover:text-primary transition-all duration-200":
             !isMobile,

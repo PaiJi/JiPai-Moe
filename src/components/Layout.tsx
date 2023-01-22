@@ -1,7 +1,7 @@
 import React from "react"
-import Footer from "./Footer"
-import Header from "./Header"
-import SEO from "./Seo"
+import Footer from "@/components/Footer"
+import Header from "@/components/Header"
+import SEO from '@/components/Seo'
 
 interface LayoutProps {
   children: React.ReactNode

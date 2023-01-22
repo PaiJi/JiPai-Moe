@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: public
-          path: public/
+          path: out/
   deploy:
     needs: build
     runs-on: ubuntu-latest
