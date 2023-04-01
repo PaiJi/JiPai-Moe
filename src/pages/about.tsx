@@ -6,7 +6,7 @@ import "swiper/css/bundle"
 
 export default function About() {
   return (
-    <main className="page-about text-dark-666 rounded-lg text-base tracking-wide my-5 bg-white leading-6 p-5">
+    <main className="page-about text-dark-666 rounded-large text-base tracking-wide my-5 bg-white leading-6 p-10">
       <section className="mb-8">
         <h2 className="text-2xl font-bold text-primary mb-2">产品特点</h2>
         <p>95后，真实大龄肥宅。</p>

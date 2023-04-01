@@ -9,7 +9,7 @@ export default function Friends() {
   }, [])
 
   return (
-    <main className="my-5">
+    <main className="my-5 rounded-large bg-white p-10">
       <section className="my-8">
         <div className="items-baseline mb-4 ">
           <h2 className="text-2xl text-primary border-b-4 inline-block pb-1">
@@ -51,7 +51,7 @@ function FriendRender(list: typeof friendsJson.friends) {
     <>
       {list.map(friend => (
         <a
-          className="friend-item inline-block bg-white rounded-lg transition duration-200 p-2 flex items-center transform hover:-translate-y-2"
+          className="friend-item inline-block bg-white rounded-lg transition duration-200 p-2 flex items-center transform hover:-translate-y-2 outline outline-1 outline-gray-200"
           key={friend.name}
           target="_blank"
           rel="noreferrer"

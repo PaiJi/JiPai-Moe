@@ -42,6 +42,42 @@ const links = [
 ]
 
 const Header: React.FC = () => {
+  return (
+    <header
+      className={classNames(
+        "flex flex-col justify-between items-center mb-12 md:mt-8"
+      )}
+    >
+      <MobileMenu />
+      <div className="flex flex-row items-center justify-between bg-black/70 p-6 rounded-large md:mt-0 mt-16">
+        <div className="rounded-large overflow-hidden"><img
+          width={55}
+          height={55}
+          src="https://avatars.githubusercontent.com/u/3956400?v=4"
+        /></div>
+        
+        <div className="ml-4">
+          <Link href="/" className="text-white text-5xl font-black">
+            JiPa<span className="text-red-400">i</span>
+          </Link>
+        </div>
+      </div>
+
+      <nav className="mt-4 flex items-center text-white text-2xl font-black transition-all duration-200 hidden md:block">
+        {links.map(link => (
+          <LinkRender
+            key={link.to}
+            to={link.to}
+            type={link.type}
+            linkName={link.linkName}
+          />
+        ))}
+      </nav>
+    </header>
+  )
+}
+
+function MobileMenu() {
   const bodyRef = useRef<HTMLBodyElement | null>(null)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -60,19 +96,17 @@ const Header: React.FC = () => {
       }
     }
   }
-
   return (
-    <header
-      className={classNames(
-        "flex flex-col justify-between items-center mb-12 md:mt-8"
-      )}
-    >
+    <>
       <div
         id="mobile-nav-bar"
         className="md:hidden flex items-center justify-between w-full bg-white py-2 px-4 top-0 fixed z-10 leading-normal"
       >
         <span className="text-xl text-primary">JiPai Store</span>
-        <FiMenu className="text-2xl" onClick={() => handleMenuClick(!isMenuOpen)} />
+        <FiMenu
+          className="text-2xl"
+          onClick={() => handleMenuClick(!isMenuOpen)}
+        />
       </div>
       <div
         className={classNames(
@@ -111,35 +145,7 @@ const Header: React.FC = () => {
           </ul>
         </div>
       </div>
-
-      <div className="flex flex-col items-center justify-between mt-14 lg:mt-0">
-        <img
-          width={55}
-          height={55}
-          style={{ borderRadius: "999%", border: "solid 5px white" }}
-          src="https://avatars.githubusercontent.com/u/3956400?v=4"
-        />
-        <div className="flex items-end mt-4">
-          <Link to="/" className="text-primary text-5xl font-black mr-2">
-            JiPai
-          </Link>
-          <Link to="/" className="text-primary text-5xl font-bold">
-            Store
-          </Link>
-        </div>
-      </div>
-
-      <nav className="mt-4 flex items-center text-dark-666 text-2xl font-black transition-all duration-200 hidden md:block">
-        {links.map(link => (
-          <LinkRender
-            key={link.to}
-            to={link.to}
-            type={link.type}
-            linkName={link.linkName}
-          />
-        ))}
-      </nav>
-    </header>
+    </>
   )
 }
 
@@ -166,7 +172,7 @@ function LinkRender({
         //   "bg-primary text-white": isMobile,
         // })}
         className={classNames({
-          "relative ml-3 font-bold hover:text-primary transition-all duration-200":
+          "relative ml-3 font-bold hover:text-primary-light transition-all duration-200":
             !isMobile,
           "relative font-bold py-2 px-2 rounded block": isMobile,
         })}
@@ -182,7 +188,7 @@ function LinkRender({
         rel="noreferrer"
         onClick={onClick}
         className={classNames({
-          "ml-3 hover:text-primary transition-all duration-200": !isMobile,
+          "ml-3 hover:text-primary-light transition-all duration-200": !isMobile,
           "relative font-bold py-2 px-2 rounded inline-block": isMobile,
         })}
       >
