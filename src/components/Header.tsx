@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react"
 import classNames from "classnames"
 import { FiMenu } from "react-icons/fi"
 import Link from "next/link"
+import { useRouter } from "next/router"
 
 const links = [
   {
@@ -9,24 +10,19 @@ const links = [
     to: "/",
     type: "inSite",
   },
-  // {
-  //   linkName: "AIO",
-  //   to: "/aio/",
-  //   type: "inSite",
-  // },
   {
     linkName: "配料表",
-    to: "/about/",
+    to: "/about",
     type: "inSite",
   },
   {
     linkName: "实验室",
-    to: "/labs/",
+    to: "/labs",
     type: "inSite",
   },
   {
     linkName: "朋友们",
-    to: "/friends/",
+    to: "/friends",
     type: "inSite",
   },
   {
@@ -45,17 +41,18 @@ const Header: React.FC = () => {
   return (
     <header
       className={classNames(
-        "flex flex-col justify-between items-center mb-12 md:mt-8"
+        "flex flex-col md:flex-row justify-between items-center mb-12 md:mt-8"
       )}
     >
-      <MobileMenu />
       <div className="flex flex-row items-center justify-between bg-black/70 p-6 rounded-large md:mt-0 mt-16">
-        <div className="rounded-large overflow-hidden"><img
-          width={55}
-          height={55}
-          src="https://avatars.githubusercontent.com/u/3956400?v=4"
-        /></div>
-        
+        <div className="rounded-large overflow-hidden">
+          <img
+            width={55}
+            height={55}
+            src="https://avatars.githubusercontent.com/u/3956400?v=4"
+          />
+        </div>
+
         <div className="ml-4">
           <Link href="/" className="text-white text-5xl font-black">
             JiPa<span className="text-red-400">i</span>
@@ -63,7 +60,7 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      <nav className="mt-4 flex items-center text-white text-2xl font-black transition-all duration-200 hidden md:block">
+      <nav className="flex items-center text-white text-2xl font-black transition-all duration-200 hidden md:block">
         {links.map(link => (
           <LinkRender
             key={link.to}
@@ -73,6 +70,8 @@ const Header: React.FC = () => {
           />
         ))}
       </nav>
+
+      <MobileMenu />
     </header>
   )
 }
@@ -162,6 +161,8 @@ function LinkRender({
   isMobile?: boolean
   onClick?: () => void
 }) {
+  const router = useRouter()
+
   if (type === "inSite") {
     return (
       <Link
@@ -172,9 +173,11 @@ function LinkRender({
         //   "bg-primary text-white": isMobile,
         // })}
         className={classNames({
-          "relative ml-3 font-bold hover:text-primary-light transition-all duration-200":
-            !isMobile,
+          "relative ml-3 font-bold transition-all duration-200": !isMobile,
+          "hover:text-primary-light": !isMobile && router.asPath !== to,
           "relative font-bold py-2 px-2 rounded block": isMobile,
+          "text-primary": !isMobile && router.asPath === to,
+          "bg-primary text-white": isMobile && router.asPath === to,
         })}
       >
         {linkName}
@@ -188,7 +191,8 @@ function LinkRender({
         rel="noreferrer"
         onClick={onClick}
         className={classNames({
-          "ml-3 hover:text-primary-light transition-all duration-200": !isMobile,
+          "ml-3 hover:text-primary-light transition-all duration-200":
+            !isMobile,
           "relative font-bold py-2 px-2 rounded inline-block": isMobile,
         })}
       >

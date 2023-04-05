@@ -7,10 +7,17 @@ export default function Home() {
   return (
     <main className="my-4">
       <section className="index-swiper my-4 rounded-large overflow-hidden">
-        <Swiper modules={[Autoplay]} autoplay={{delay:5000}} className="rounded-large overflow-hidden h-full">
+        <Swiper
+          modules={[Autoplay]}
+          autoplay={{ delay: 5000 }}
+          className="rounded-large overflow-hidden h-full"
+        >
           {swiperImagesJson.index.map(image => (
             <SwiperSlide key={image.name}>
-              <div className="h-full w-full bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${image.link})` }}></div>
+              <div
+                className="h-full w-full bg-cover bg-no-repeat bg-center"
+                style={{ backgroundImage: `url(${image.link})` }}
+              ></div>
             </SwiperSlide>
           ))}
         </Swiper>
