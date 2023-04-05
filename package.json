@@ -1,0 +1,45 @@
+{
+  "name": "jipai-moe",
+  "private": true,
+  "description": "",
+  "version": "6",
+  "engines": {
+    "node": ">=18.12.1"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build && next export",
+    "start:static": "npx http-server ./out"
+  },
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "next": "13.2.4",
+    "react": "latest",
+    "react-dom": "latest",
+    "swiper": "^9.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.33",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "prettier": "2.8.7",
+    "react-icons": "^4.8.0",
+    "sass": "^1.60.0",
+    "tailwindcss": "^3.3.1",
+    "typescript": "^5.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PaiJi/JiPai-Moe"
+  }
+}

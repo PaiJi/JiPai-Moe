@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Rubik&display=swap");
+@import "./var.scss";
+
+#bg{
+  background: linear-gradient(-60deg,$steelBlue, $malibu,skyblue,lightskyblue);
+}
+
+body {
+  // background: linear-gradient(-60deg,$steelBlue, $malibu,skyblue,lightskyblue);
+  // background: linear-gradient(-45deg, black,#666666);
+  background-color: #f4f4f4;
+  background-attachment:fixed;
+  font-family: "Rubik", "Noto Sans SC", "Helvetica Neue", Helvetica, Arial,
+    "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei",
+    sans-serif;
+  scrollbar-gutter: stable both-edges;
+
+  &::-webkit-scrollbar {
+    // display: none;
+    width: 0.5em;
+  }
+
+  &::-webkit-scrollbar-track {
+    // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    // outline: 1px solid slategrey;
+  }
+}
+
+// .shadow {
+//   box-shadow: 1px 1px 4px 0px #000000 10%;
+// }
+
+.nav-active::after {
+  position: absolute;
+  content: "";
+  right: -5px;
+  bottom: 0px;
+  width: 80%;
+  height: 50%;
+  z-index: -1;
+  background-color: #e5eef8;
+}
+
+.dashed {
+  padding-bottom: 2px;
+  background: linear-gradient(
+      to right,
+      currentColor,
+      currentColor 4px,
+      transparent 4px
+    )
+    repeat-x 0 bottom/7px 1px;
+}
+
+body.stop-scroll {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.page-about {
+  p {
+    margin: 5px 0px 5px 0px;
+  }
+}
+
+.index-swiper {
+  @media screen and (max-width:768px) {
+    height:calc(100vw - 4rem);
+  }
+  // height: 500px;
+  // max-height: 600px;
+}
+
+.friend-item {
+  .friend-item-slogan {
+    opacity: 0;
+    max-height: 0px;
+    overflow: hidden;
+  }
+  &:hover .friend-slogan-display {
+    opacity: 0;
+    max-height: 0px;
+    overflow: hidden;
+  }
+
+  &:hover .friend-item-slogan {
+    opacity: 1;
+    max-height: unset;
+  }
+}
+
+.modal-background--fade-out {
+  animation-duration: 200ms;
+  animation-delay: 200ms;
+  animation-name: modal-bg-fade;
+  animation-fill-mode: forwards;
+}
+
+@keyframes modal-bg-fade {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+    display: none;
+  }
+}
