@@ -14,14 +14,12 @@
     "start:static": "npx http-server ./out"
   },
   "dependencies": {
-    "classnames": "^2.3.1",
     "clsx": "^1.2.1",
     "next": "13.4.4",
     "react": "latest",
     "react-dom": "latest",
     "swiper": "^9.3.2",
-    "swr": "^2.1.5",
-    "xml-js": "^1.6.11"
+    "swr": "^2.1.5"
   },
   "devDependencies": {
     "@types/node": "18.15.11",

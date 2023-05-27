@@ -1,5 +1,5 @@
-import classNames from "classnames"
 import React, { useEffect, useRef, useState } from "react"
+import clsx from "clsx"
 
 interface InvisibleLabelProps {
   defaultText: string
@@ -21,7 +21,7 @@ export default function InvisibleLabel(props: InvisibleLabelProps) {
 
   return (
     <span
-      className={classNames("inline-block text-center")}
+      className={clsx("inline-block text-center")}
       ref={spanRef}
       style={{ ...(defaultWidth ? { width: defaultWidth } : {}) }}
       onMouseEnter={() => setShow(true)}

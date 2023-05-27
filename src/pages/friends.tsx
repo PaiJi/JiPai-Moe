@@ -1,4 +1,3 @@
-import classNames from "classnames"
 import React, { useEffect, useState } from "react"
 import friendsJson from "../../content/friends.json"
 import clsx from "clsx"
@@ -81,7 +80,7 @@ function FriendRender(list: typeof friendsJson.friends) {
               {friend.name}
             </h2>
             <p
-              className={classNames(
+              className={clsx(
                 "friend-item-default-intro text-dark-666 text-xs transition duration-400 xl:truncate",
                 {
                   "friend-slogan-display": friend.intro && friend.slogan,

@@ -1,6 +1,6 @@
-import classNames from "classnames"
 import React from "react"
 import favJson from "../../content/fav.json"
+import clsx from "clsx";
 
 export default function Fav() {
   return (
@@ -39,7 +39,7 @@ function FavItem(item: { name: string; cover: string; url?: string }) {
   return (
     <div
       onClick={() => (item.url ? window.open(item.url) : null)}
-      className={classNames("w-full bg-cover rounded shadow-lg duration-200 transform hover:-translate-y-2 hover:shadow-2xl", {
+      className={clsx("w-full bg-cover rounded shadow-lg duration-200 transform hover:-translate-y-2 hover:shadow-2xl", {
         "cursor-pointer": item.url,
       })}
       key={item.name}
