@@ -3,7 +3,7 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
   },
-  content: ["./src/**/*.tsx"],
+  content: ["./src/**/*.tsx", "./src/utils/define.ts"],
   theme: {
     extend: {
       colors: {
@@ -11,8 +11,8 @@ module.exports = {
         "primary-light": "#E5EEF8",
         "gray-102": "rgba(102,102,102,0.73)",
         "dark-666": "#666666",
-        malibu:'#6CB0FF',
-        steelBlue:'#467CBA'
+        malibu: "#6CB0FF",
+        steelBlue: "#467CBA",
       },
       borderRadius: {
         large: "80px",
