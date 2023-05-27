@@ -1,4 +1,4 @@
-function lightenColor(hexColor, opacity) {
+function lightenColor(hexColor: string, opacity: number) {
   var r = parseInt(hexColor.slice(1, 3), 16),
     g = parseInt(hexColor.slice(3, 5), 16),
     b = parseInt(hexColor.slice(5, 7), 16)

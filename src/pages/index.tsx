@@ -19,7 +19,7 @@ import { Autoplay } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
 import useSWR from "swr"
 
-const fetcher = (...args) => fetch(...args).then(res => res.json())
+const fetcher = (url: string) => fetch(url).then(res => res.json())
 
 const SignPosts = [
   {

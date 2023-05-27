@@ -96,6 +96,6 @@ export type Mastodon = {
 
 export type AIO = {
   newestPost: NewestPost
-  recentlyListen: RecentlyListen
+  recentlyListen: LastFM
   mastodon: Mastodon
 }

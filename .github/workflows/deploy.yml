@@ -26,9 +26,9 @@ jobs:
           node-version: 'lts/*'
       - name: Install dependencies & build
         run: |
-          npm install --global yarn
+          corepack enable
           yarn
-          yarn build
+          yarn export
       - name: Save build artifact
         uses: actions/upload-artifact@v3
         with:
