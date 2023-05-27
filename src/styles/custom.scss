@@ -1,15 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Rubik&display=swap");
 @import "./var.scss";
 
-#bg{
-  background: linear-gradient(-60deg,$steelBlue, $malibu,skyblue,lightskyblue);
+#bg {
+  background: linear-gradient(
+    -60deg,
+    $steelBlue,
+    $malibu,
+    skyblue,
+    lightskyblue
+  );
 }
 
 body {
   // background: linear-gradient(-60deg,$steelBlue, $malibu,skyblue,lightskyblue);
   // background: linear-gradient(-45deg, black,#666666);
-  background-color: #f4f4f4;
-  background-attachment:fixed;
+  // background-color: #f4f4f4;
+  // background-attachment: fixed;
   font-family: "Rubik", "Noto Sans SC", "Helvetica Neue", Helvetica, Arial,
     "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei",
     sans-serif;
@@ -68,9 +74,9 @@ body.stop-scroll {
 }
 
 .index-swiper {
-  @media screen and (max-width:768px) {
-    height:calc(100vw - 4rem);
-  }
+  // @media screen and (max-width: 768px) {
+  //   height: calc(100vw - 4rem);
+  // }
   // height: 500px;
   // max-height: 600px;
 }
@@ -109,4 +115,14 @@ body.stop-scroll {
     transform: translateX(100%);
     display: none;
   }
+}
+
+.project-card__languages {
+  span:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+
+.default-box-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }

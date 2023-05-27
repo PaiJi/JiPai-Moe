@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from "react"
-import classNames from "classnames"
 import { FiMenu } from "react-icons/fi"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import { ContainerStyle } from "@/pages/index"
+import clsx from "clsx"
 
 const links = [
   {
@@ -39,10 +40,8 @@ const links = [
 
 const Header: React.FC = () => {
   return (
-    <header
-      className={classNames("flex flex-col md:flex-row1 justify-between")}
-    >
-      <div className="hidden md:flex flex-row items-center justify-between p-4 rounded-full md:mt-0 mt-16">
+    <header className={clsx("flex flex-col")}>
+      <div className="xl:flex flex-row items-center justify-between rounded-full">
         <div className="rounded-full overflow-hidden">
           <img
             width={200}
@@ -52,15 +51,22 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      <div className="my-4 hidden md:block">
-        <Link href="/" className="text-white text-5xl font-black text-gray-700">
+      <div className="mt-10 tracking-wide">
+        <Link
+          href="/"
+          className="text-primary text-5xl font-black text-gray-700"
+        >
           JiPa<span className="text-red-400">i</span>
         </Link>
-        <p>27 yo.</p>
-        <p>Web Developer.</p>
+        <p className="mb-2 text-gray-400 font-bold text-lg">27 yo</p>
+        <div className="xl:text-xl text-sm">
+          <p className="text-gray-500">💻 Web Developer</p>
+          <p className="text-gray-500">📍 Shanghai</p>
+          <p className="text-gray-500">&quot;Everything is code here.&quot;</p>
+        </div>
       </div>
 
-      <nav className="mt-8 hidden flex flex-col items-start text-dark-666 text-2xl font-black transition-all duration-200 md:flex">
+      {/* <nav className="mt-8 hidden flex flex-col items-start text-dark-666 text-2xl font-black transition-all duration-200 md:flex">
         {links.map(link => (
           <LinkRender
             key={link.to}
@@ -71,7 +77,7 @@ const Header: React.FC = () => {
         ))}
       </nav>
 
-      <MobileMenu />
+      <MobileMenu /> */}
     </header>
   )
 }
@@ -108,7 +114,7 @@ function MobileMenu() {
         />
       </div>
       <div
-        className={classNames(
+        className={clsx(
           "fixed z-10 mt-11 w-full h-full transition-all duration-200 bg-transparent",
           {
             "bg-gray-400 bg-opacity-25 block": isMenuOpen,
@@ -121,7 +127,7 @@ function MobileMenu() {
       >
         <div
           onClick={e => e.stopPropagation()}
-          className={classNames(
+          className={clsx(
             "md:hidden absolute top-0 bg-white h-full right-0 w-48 px-4 py-4 transform transition-all duration-200",
             {
               "translate-x-full": !isMenuOpen,
@@ -168,7 +174,7 @@ function LinkRender({
       <Link
         href={to}
         onClick={onClick}
-        className={classNames({
+        className={clsx({
           "relative mb-3 font-bold transition-all duration-200": !isMobile,
           "hover:text-primary": !isMobile && router.asPath !== to,
           "relative font-bold py-2 px-2 rounded block": isMobile,
@@ -186,9 +192,8 @@ function LinkRender({
         target="_blank"
         rel="noreferrer"
         onClick={onClick}
-        className={classNames({
-          "mb-3 hover:text-primary transition-all duration-200":
-            !isMobile,
+        className={clsx({
+          "mb-3 hover:text-primary transition-all duration-200": !isMobile,
           "relative font-bold py-2 px-2 rounded inline-block": isMobile,
         })}
       >

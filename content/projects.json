@@ -1,7 +1,44 @@
 [
   {
+    "name": "taweret",
+    "description": "一个小毛球下载任务管理面板。",
+    "url": "https://github.com/PaiJi/taweret",
+    "languages": ["Typescript"]
+  },
+  {
+    "name": "JiPai.Moe",
+    "description": "就是你现在看到的主页。",
+    "url": "https://www.jipai.moe",
+    "languages": ["Typescript"]
+  },
+  {
+    "name": "JiPai.Blog",
+    "description": "鸡排的博客。",
+    "url": "https://blog.jipai.moe",
+    "languages": ["Typescript"]
+  },
+  {
     "name": "EatMe",
     "description": "一个简单的命令行工具，可以帮助你把本地图片目录压缩后上传至任意和S3兼容的服务商。",
-    "url": ""
+    "url": "https://github.com/PaiJi/eatme",
+    "languages": ["JavaScript"]
+  },
+  {
+    "name": "FurryEventChina.com",
+    "description": "一个致力于提供全国最新兽展信息聚合的网站。",
+    "url": "https://www.furryeventchina.com",
+    "languages": ["Typescript"]
+  },
+  {
+    "name": "hex-theme-ego",
+    "description": "鸡排自用的hexo博客主题",
+    "url": "https://github.com/PaiJi/hexo-theme-ego",
+    "languages": ["Pug", "Styl"]
+  },
+  {
+    "name": "KedamaBlogCollection",
+    "description": "毛语线圈物语的博客收集文档",
+    "url": "https://github.com/PaiJi/KedamaBlogCollection",
+    "languages": ["Markdown"]
   }
 ]
