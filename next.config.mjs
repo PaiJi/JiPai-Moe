@@ -12,12 +12,9 @@ const __dirname = new URL(".", import.meta.url).pathname
 
 const nextConfig = {
   /* config options here */
+  output: 'export',
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
-  },
-  i18n: {
-    locales: ["zh-Hans"],
-    defaultLocale: "zh-Hans",
   },
 }
 
