@@ -50,7 +50,7 @@ const SignPosts = [
   {
     href: "http://bgm.tv/user/338144",
     primaryColor: "#F09199",
-    icon: <img src="http://bgm.tv/img/ico/bgm_banner.gif" />,
+    icon: <img src="https://bgm.tv/img/ico/bgm_banner.gif" />,
   },
 ]
 
