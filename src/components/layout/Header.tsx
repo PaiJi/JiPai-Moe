@@ -39,16 +39,15 @@ const Header: React.FC = () => {
   return (
     <header className={clsx("flex flex-col")}>
       <div className="xl:flex flex-row items-center justify-between rounded-full">
-        <div className="rounded-full overflow-hidden">
+        <div className="rounded-full overflow-hidden w-fit">
           <img
-            width={200}
-            height={200}
+            className="w-[120px] h-[120px] xl:w-[200px] xl:h-[200px]"
             src="https://avatars.githubusercontent.com/u/3956400?v=4"
           />
         </div>
       </div>
 
-      <div className="mt-10 tracking-wide">
+      <div className="mt-10 tracking-wide mx-4 xl:mx-0">
         <Link
           href="/"
           className="text-primary text-5xl font-black text-gray-700"
