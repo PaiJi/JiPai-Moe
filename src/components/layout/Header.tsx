@@ -39,7 +39,7 @@ const Header: React.FC = () => {
   return (
     <header className={clsx("flex flex-col")}>
       <div className="xl:flex flex-row items-center justify-between rounded-full">
-        <div className="rounded-full overflow-hidden w-fit">
+        <div className="rounded-full overflow-hidden w-fit hover:animate-spin">
           <img
             className="w-[120px] h-[120px] xl:w-[200px] xl:h-[200px]"
             src="https://avatars.githubusercontent.com/u/3956400?v=4"

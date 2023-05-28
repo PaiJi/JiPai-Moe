@@ -11,7 +11,7 @@ export default function Layout(props: LayoutProps) {
   return (
     <>
       <SEO />
-      <div className="max-w-[480px] xl:max-w-[1600px] m-auto px-6 md:px-8 md:mt-8">
+      <div className="max-w-[480px] xl:max-w-[1600px] m-auto px-6 md:mt-8">
         <div className="flex flex-col xl:flex-row xl:justify-between">
           <aside className="mb-6 md:h-fit sticky xl:flex-grow xl:min-w-[400px] top-8 xl:px-6 flex xl:justify-center">
             <Header />
