@@ -47,7 +47,7 @@ export default function MastodonCard({
         </div>
       </div>
       <p
-        className="flex-grow"
+        className="flex-grow line-clamp-3 break-all"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: latestTweet?.content }}
       />
