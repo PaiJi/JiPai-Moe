@@ -38,7 +38,7 @@ export function Tab() {
       primaryColor: "bg-violet-100",
     },
     {
-      text: "状态监控",
+      text: "状态",
       href: "https://status.jipai.moe",
       icon: <CgSmartphoneChip />,
       primaryColor: "bg-indigo-100",
@@ -71,7 +71,7 @@ function TabItem({
   icon: React.ReactNode
 }) {
   const LinkCommonClassName =
-    "p-6 text-center rounded-2xl flex items-center justify-center text-sm"
+    "py-6 px-4 text-center rounded-2xl flex items-center justify-center text-sm"
   return (
     <Link
       href={href}
