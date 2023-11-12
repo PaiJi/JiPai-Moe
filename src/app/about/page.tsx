@@ -1,11 +1,10 @@
+import React from "react"
 import InvisibleLabel from "@/components/InvisibleLabel"
 import { Tab } from "@/components/layout/Tab"
 import favJson from "@/content/fav.json"
 import { ContainerStyle } from "@/utils/define"
 import clsx from "clsx"
-import React from "react"
-import "swiper/css/bundle"
-import { Swiper, SwiperSlide } from "swiper/react"
+import SimpleSwiper from "./components/SimpleSwiper"
 
 export default function About() {
   return (
@@ -15,7 +14,7 @@ export default function About() {
       </aside>
       <main
         className={clsx(
-          "text-dark-666 text-base tracking-wide leading-6 overflow-hidden mb-8"
+          "text-dark-666 text-base tracking-wide leading-6 overflow-hidden mb-8",
         )}
       >
         <section className={clsx("mb-8 p-8", ContainerStyle)}>
@@ -117,26 +116,7 @@ function SubSection({
 
       {swiperImage?.length && (
         <div className="-ml-10 -mr-10 mt-4 mb-4">
-          <Swiper
-            className=""
-            spaceBetween={0}
-            slidesPerView={2}
-            breakpoints={{
-              1200: {
-                slidesPerView: 4,
-              },
-            }}
-          >
-            {swiperImage?.map(image => (
-              <SwiperSlide key={image}>
-                <img
-                  className="w-full object-cover brightness-75"
-                  style={{ height: 300 }}
-                  src={image}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <SimpleSwiper images={swiperImage} />
         </div>
       )}
 

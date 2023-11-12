@@ -1,7 +1,7 @@
 import React from "react"
-import projectJson from "../../content/projects.json"
 import clsx from "clsx"
 import { Tab } from "@/components/layout/Tab"
+import projectJson from "@/content/projects.json"
 
 export default function Labs() {
   return (
@@ -16,7 +16,7 @@ export default function Labs() {
   )
 }
 
-export function ProjectCard({
+function ProjectCard({
   project,
 }: {
   project: {
