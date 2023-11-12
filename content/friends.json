@@ -106,6 +106,13 @@
       "intro": "一个超酷的南极工程师",
       "slogan": "",
       "avatar": "https://brr.fyi/media/snowman.png"
+    },
+    {
+      "name": "最小可读",
+      "url": "https://mvread.blog/",
+      "intro": "基本无害，可能有用",
+      "slogan": "",
+      "avatar": ""
     }
   ]
 }

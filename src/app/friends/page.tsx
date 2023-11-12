@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from "react"
-import friendsJson from "../../content/friends.json"
+import React from "react"
 import clsx from "clsx"
 import { Tab } from "@/components/layout/Tab"
+import friendsJson from "@/content/friends.json"
 export default function Friends() {
-  const [friends, setFriends] = useState<typeof friendsJson>()
-
-  useEffect(() => {
-    setFriends(friendsJson)
-  }, [])
-
+  const friends = friendsJson
   return (
     <>
       <aside>
@@ -84,7 +79,7 @@ function FriendRender(list: typeof friendsJson.friends) {
                 "friend-item-default-intro text-dark-666 text-xs transition duration-400 xl:truncate",
                 {
                   "friend-slogan-display": friend.intro && friend.slogan,
-                }
+                },
               )}
             >
               {friend.intro || friend.slogan}

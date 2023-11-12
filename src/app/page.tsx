@@ -1,13 +1,12 @@
-import LastFM from "@/components/LastFM"
-import MastodonCard from "@/components/MastodonCard"
-import PostCard from "@/components/PostCard"
+import React from "react"
+import DynamicInfoCard from "@/components/DynamicInfoCard"
+import HomeSwiper from "@/components/HomeSwiper"
 import { Tab } from "@/components/layout/Tab"
 import swiperImagesJson from "@/content/swiperImages.json"
 import { ContainerStyle } from "@/utils/define"
 import lightenColor from "@/utils/lightenColor"
 import clsx from "clsx"
 import Link from "next/link"
-import React from "react"
 import {
   FaGithubSquare,
   FaInstagramSquare,
@@ -15,11 +14,6 @@ import {
   FaTwitterSquare,
 } from "react-icons/fa"
 import { SiTrakt } from "react-icons/si"
-import { Autoplay } from "swiper"
-import { Swiper, SwiperSlide } from "swiper/react"
-import useSWR from "swr"
-
-const fetcher = (url: string) => fetch(url).then(res => res.json())
 
 const SignPosts = [
   {
@@ -55,29 +49,10 @@ const SignPosts = [
 ]
 
 export default function Home() {
-  const { data: aioData, isLoading } = useSWR(
-    "https://aoi-t5mvcipjqq-de.a.run.app",
-    fetcher
-  )
-
   return (
     <>
       <section className={clsx("index-swiper overflow-hidden", ContainerStyle)}>
-        <Swiper
-          modules={[Autoplay]}
-          autoplay={{ delay: 5000 }}
-          style={{ height: "400px" }}
-          className="overflow-hidden h-full"
-        >
-          {swiperImagesJson.index.map(image => (
-            <SwiperSlide key={image.name}>
-              <div
-                className="h-full w-full bg-cover bg-no-repeat bg-center"
-                style={{ backgroundImage: `url(${image.link})` }}
-              ></div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <HomeSwiper images={swiperImagesJson.index} />
       </section>
 
       <section className={clsx("bg-white p-8 my-4", ContainerStyle)}>
@@ -91,14 +66,7 @@ export default function Home() {
 
       <Tab />
 
-      <section className={clsx("bg-white p-8 my-4", ContainerStyle)}>
-        <PostCard loading={isLoading} post={aioData?.newestPost} />
-      </section>
-
-      <section className="my-4 grid xl:grid-cols-2 gap-4">
-        <LastFM recentlyListen={aioData?.recentlyListen} loading={isLoading} />
-        <MastodonCard loading={isLoading} latestTweet={aioData?.mastodon} />
-      </section>
+      <DynamicInfoCard />
 
       <section className={clsx("my-4 grid grid-cols-3 xl:grid-cols-8 gap-4")}>
         {SignPosts.map(({ href, primaryColor, icon }) => (
@@ -126,11 +94,14 @@ function QuickLink({
   return (
     <Link href={href}>
       <div
-        className={clsx("p-6 h-full group transition hover:drop-shadow-2xl", ContainerStyle)}
+        className={clsx(
+          "p-6 h-full group transition hover:drop-shadow-2xl",
+          ContainerStyle,
+        )}
         style={{ backgroundColor: lightenColor(primaryColor, 0.1) }}
       >
         <div
-          className="text-3xl leading-3 text-center h-full items-center flex justify-center group-hover:scale-150 transition-all" 
+          className="text-3xl leading-3 text-center h-full items-center flex justify-center group-hover:scale-150 transition-all"
           style={{ color: primaryColor }}
         >
           {icon}
