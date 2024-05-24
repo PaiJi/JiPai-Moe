@@ -8,7 +8,7 @@ export default function MobileTab() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <>
-      <nav className="fixed lg:hidden top-0 left-0 py-2 px-6 shadow bg-white w-full flex justify-between">
+      <nav className="fixed lg:hidden top-0 left-0 py-2 px-6 shadow bg-white w-full flex justify-between z-10">
         <a href="/" className="font-bold text-xl text-primary-blue">
           JiPa<span className="text-red-400">i</span> Store
         </a>

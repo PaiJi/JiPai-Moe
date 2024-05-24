@@ -1,12 +1,13 @@
 import clsx from "clsx";
 import friendsJson from "@content/friends.json";
+import { ContainerStyle } from "@utils/define";
 
 export default function Friends() {
   const friends = friendsJson;
   return (
     <>
       <main className={clsx("mb-8")}>
-        <section className={clsx("my-8")}>
+        <section className={clsx("my-8 p-8", ContainerStyle)}>
           <div className="items-baseline mb-4">
             <h2 className="text-2xl text-primary border-b-4 inline-block pb-1">
               朋友们
@@ -21,7 +22,7 @@ export default function Friends() {
           </ul>
         </section>
 
-        <section className="my-8">
+        <section className={clsx("my-8 p-8", ContainerStyle)}>
           <div className="items-baseline mb-4">
             <h2 className="text-2xl text-primary inline-block border-b-4 pb-1">
               有点意思

@@ -1,11 +1,12 @@
 import React from "react";
 import clsx from "clsx";
 import projectJson from "@content/projects.json";
+import { ContainerStyle } from "@utils/define";
 
 export default function Labs() {
   return (
     <main>
-      <div className={clsx("w-full grid grid-cols-1 gap-4")}>
+      <div className={clsx("w-full grid grid-cols-1 gap-4 p-8 my-8", ContainerStyle)}>
         {projectJson.map((project) => (
           <ProjectCard key={project.name} project={project} />
         ))}
