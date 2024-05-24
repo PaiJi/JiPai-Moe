@@ -16,7 +16,7 @@ export default function EmblaCarousel({
     <div className="embla" ref={emblaRef}>
       <div className="embla__container">
         {images.map((image) => (
-          <div className={clsx("embla__slide", slideCls)}>
+          <div key={image.src} className={clsx("embla__slide", slideCls)}>
             <img
               className={clsx("object-cover w-full overflow-hidden", imgCls)}
               src={image.src}

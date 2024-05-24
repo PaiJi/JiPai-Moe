@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import BaseHead from "./layout/BaseHead.astro";
 import Header from "./layout/Header";
 // import Footer from "./layout/Footer";
@@ -19,11 +20,12 @@ const { title, description } = Astro.props;
       title={title ? `${title} | ${SITE_TITLE}` : SITE_TITLE}
       description={description || SITE_DESCRIPTION}
     />
+    <ViewTransitions />
   </head>
-  <body class="max-w-[480px] xl:max-w-[1600px] m-auto px-6 md:mt-8">
+  <body class="max-w-[480px] xl:max-w-[1200px] m-auto px-6 md:mt-8">
     <div class="flex flex-col xl:flex-row xl:justify-between">
       <aside
-        class="mb-6 md:h-fit sticky xl:flex-grow xl:min-w-[400px] top-12 xl:px-6 flex xl:justify-center mt-20 lg:mt-0"
+        class="mb-6 md:h-fit sticky xl:min-w-[400px] top-12 xl:px-6 flex xl:justify-center mt-20 lg:mt-0"
       >
         <Header />
       </aside>
