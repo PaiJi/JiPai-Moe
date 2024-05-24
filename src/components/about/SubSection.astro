@@ -1,0 +1,32 @@
+---
+import Slider from "@components/Slider";
+
+interface Props {
+  title: string;
+  emoji: string;
+  swiperImage?: string[];
+}
+const { title, emoji, swiperImage } = Astro.props;
+---
+
+<div class="my-5">
+  <h3 class="text-lg flex items-center font-base text-slate-600">
+    <span class="text-3xl inline-block mr-2">{emoji}</span>
+    {title}
+  </h3>
+
+  <!-- {
+    swiperImage?.length && (
+      <div class="-ml-8 -mr-8 my-4">
+        <Slider
+          client:load
+          imgCls="h-[300px]"
+          slideCls="!basis-1/4"
+          images={swiperImage.map((image) => ({ src: image, name: image }))}
+        />
+      </div>
+    )
+  } -->
+
+  <slot />
+</div>

@@ -1,0 +1,27 @@
+---
+import clsx from "clsx";
+import HeaderLink from "./HeaderLink.astro";
+import MobileTab from "./MobileTab";
+import { NavConfig } from "@src/consts";
+
+---
+
+<header>
+  <nav class="hidden lg:block flex items-center gap-4 py-3">
+    {
+      NavConfig.map((nav) => (
+        <HeaderLink
+          class={clsx(
+            "text-slate-600 text-base inline-block align-baseline hover:text-primary-blue px-5 py-2"
+          )}
+          activeClassName="bg-white rounded-lg shadow"
+          href={nav.href}
+        >
+          {nav.name}
+        </HeaderLink>
+      ))
+    }
+  </nav>
+
+  <MobileTab client:load />
+</header>

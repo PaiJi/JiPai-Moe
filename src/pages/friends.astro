@@ -1,0 +1,27 @@
+---
+import Layout from "@layouts/Layout.astro";
+import FriendsComponent from "@components/friends/page";
+---
+
+<Layout title="朋友们" description="鸡排和他的朋友们。">
+  <FriendsComponent />
+</Layout>
+<style is:global>
+  .friend-item {
+    .friend-item-slogan {
+      opacity: 0;
+      max-height: 0px;
+      overflow: hidden;
+    }
+    &:hover .friend-slogan-display {
+      opacity: 0;
+      max-height: 0px;
+      overflow: hidden;
+    }
+
+    &:hover .friend-item-slogan {
+      opacity: 1;
+      max-height: unset;
+    }
+  }
+</style>

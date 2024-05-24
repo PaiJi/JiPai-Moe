@@ -1,0 +1,37 @@
+---
+import BaseHead from "./layout/BaseHead.astro";
+import Header from "./layout/Header";
+// import Footer from "./layout/Footer";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Tab from "@layouts/layout/Tab.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <BaseHead
+      title={title ? `${title} | ${SITE_TITLE}` : SITE_TITLE}
+      description={description || SITE_DESCRIPTION}
+    />
+  </head>
+  <body class="max-w-[480px] xl:max-w-[1600px] m-auto px-6 md:mt-8">
+    <div class="flex flex-col xl:flex-row xl:justify-between">
+      <aside
+        class="mb-6 md:h-fit sticky xl:flex-grow xl:min-w-[400px] top-12 xl:px-6 flex xl:justify-center mt-20 lg:mt-0"
+      >
+        <Header />
+      </aside>
+      <main class="bg-white1 z-10 w-full xl:max-w-[850px] mt-11 md:mt-0">
+        <Tab />
+
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+---
+import clsx from "clsx";
+
+import Layout from "@layouts/Layout.astro";
+import { ContainerStyle } from "@utils/define";
+import DynamicInfoCard from "@components/home/DynamicInfoCard";
+import SimpleSwiper from "@components/Slider";
+import swiperImagesJson from "@content/swiperImages.json";
+import { QuickLinkSection } from "@components/home/QuickLink";
+---
+
+<Layout>
+  <section class={clsx("index-swiper overflow-hidden", ContainerStyle)}>
+    <SimpleSwiper
+      images={swiperImagesJson.index.map((image) => ({
+        src: image.link,
+        name: image.name,
+      }))}
+      imgCls="h-[300px]"
+      client:load
+    />
+  </section>
+
+  <section class={clsx("bg-white p-8 my-4", ContainerStyle)}>
+    <span
+      class="text-3xl font-bold block text-center text-dark-666 tracking-widest"
+    >
+      生命之光终将照耀地平线。
+    </span>
+    <label class="block text-center md:text-right text-gray-102">
+      来自·毛玉線圈物語Minecraft
+    </label>
+  </section>
+
+  <!-- <DynamicInfoCard client:load /> -->
+
+  <section class={clsx("my-4 grid grid-cols-3 xl:grid-cols-8 gap-4")}>
+    <QuickLinkSection />
+  </section>
+</Layout>

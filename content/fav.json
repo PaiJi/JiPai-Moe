@@ -1,0 +1,82 @@
+{
+  "games": {
+    "incoming": [
+      {
+        "name": "命运2：邪姬魅影",
+        "cover": "https://qcloud-cdn-static.lonepixel.cn/index/fav/games/destiny2-the-witch-queen-deluxe.jfif",
+        "url": "https://store.steampowered.com/app/1656330"
+      }
+    ],
+    "playing": [
+      {
+        "name": "Impostor Factory《影子工厂》",
+        "cover": "https://qcloud-cdn-static.lonepixel.cn/index/fav/games/Impostor_factory_cover.png",
+        "url": "https://store.steampowered.com/app/1182620/Impostor_Factory/"
+      },
+      {
+        "name": "命运2",
+        "cover": "https://qcloud-cdn-static.lonepixel.cn/index/fav/games/destiny2.webp",
+        "url": "https://store.steampowered.com/app/1085660/2/"
+      },
+      {
+        "name": "Minecraft",
+        "cover": "https://qcloud-cdn-static.lonepixel.cn/index/fav/games/minecraft.jpg",
+        "url": "https://www.minecraft.net/zh-hans"
+      },
+      {
+        "name": "Animal Crossing",
+        "cover": "https://qcloud-cdn-static.lonepixel.cn/index/fav/games/AnimalCrossingNewHorizons.jpg",
+        "url": ""
+      },
+      {
+        "name": "Crysis",
+        "cover": "https://qcloud-cdn-static.lonepixel.cn/index/fav/games/Crysis_Cover.jpg",
+        "url": ""
+      },
+      {
+        "name": "cities:Skylines",
+        "cover": "https://qcloud-cdn-static.lonepixel.cn/index/fav/games/cityskyline.png",
+        "url": "https://store.steampowered.com/app/255710"
+      },
+      {
+        "name": "RimWorld",
+        "cover": "https://qcloud-cdn-static.lonepixel.cn/index/fav/games/rimworld.png",
+        "url": "https://store.steampowered.com/app/294100"
+      },
+      {
+        "name": "Terraria",
+        "cover": "https://qcloud-cdn-static.lonepixel.cn/index/fav/games/terraria.png",
+        "url": "https://store.steampowered.com/app/105600"
+      },
+      {
+        "name": "stardew Valley",
+        "cover": "https://qcloud-cdn-static.lonepixel.cn/index/fav/games/stardewValley.png",
+        "url": "https://store.steampowered.com/app/413150"
+      }
+    ],
+    "holding": [
+      {
+        "name": "Hitman",
+        "cover": "https://qcloud-cdn-static.lonepixel.cn/index/fav/games/hitman.png"
+      },
+      {
+        "name": "Two Point Hospital",
+        "cover": "https://qcloud-cdn-static.lonepixel.cn/index/fav/games/twoPointHospital.png"
+      }
+    ]
+  },
+  "music": [
+    {
+      "name": "Jay Chou",
+      "cover": "",
+      "url": ""
+    }
+  ],
+  "anime": [
+    {
+      "name": "Cowboy",
+      "cover": "",
+      "url": ""
+    }
+  ]
+}
