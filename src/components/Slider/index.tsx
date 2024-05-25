@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from 'embla-carousel-autoplay'
 
 export default function EmblaCarousel({
   images,
@@ -10,7 +11,7 @@ export default function EmblaCarousel({
   imgCls?: string;
   slideCls?: string;
 }) {
-  const [emblaRef] = useEmblaCarousel();
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
 
   return (
     <div className="embla" ref={emblaRef}>
