@@ -4,6 +4,7 @@ import {
   FaLastfmSquare,
   FaTwitterSquare,
 } from "react-icons/fa";
+import { FaBluesky, FaMastodon } from "react-icons/fa6";
 import { SiTrakt } from "react-icons/si";
 import QuickLink from "./QuickLink";
 
@@ -18,6 +19,16 @@ export function QuickLinkSection() {
       href: "https://twitter.com/jipairamen",
       primaryColor: "#1DA1F2",
       icon: <FaTwitterSquare />,
+    },
+    {
+      href: "https://acg.mn/@jipai",
+      primaryColor: "#6364FF",
+      icon: <FaMastodon />,
+    },
+    {
+      href: "http://bgm.tv/user/338144",
+      primaryColor: "#3c84f6",
+      icon: <FaBluesky />,
     },
     {
       href: "https://www.instagram.com/jipai16/",
