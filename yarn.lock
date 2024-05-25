@@ -2570,6 +2570,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"embla-carousel-autoplay@npm:^8.1.3":
+  version: 8.1.3
+  resolution: "embla-carousel-autoplay@npm:8.1.3"
+  peerDependencies:
+    embla-carousel: 8.1.3
+  checksum: 10c0/7b56a5a2e05018f5908201b110f498ca93f140027dad943620d37cf58ebe73dccd4b8571693c1a6deb8e2f29551deb8eb6e297e92e78657824e3fc6e44e2cd07
+  languageName: node
+  linkType: hard
+
 "embla-carousel-react@npm:^8.1.3":
   version: 8.1.3
   resolution: "embla-carousel-react@npm:8.1.3"
@@ -3722,6 +3731,7 @@ __metadata:
     astro: "npm:^4.9.1"
     clsx: "npm:^2.1.1"
     embla-carousel: "npm:^8.1.3"
+    embla-carousel-autoplay: "npm:^8.1.3"
     embla-carousel-react: "npm:^8.1.3"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
