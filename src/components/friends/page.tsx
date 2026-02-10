@@ -55,7 +55,7 @@ function FriendRender(list: typeof friendsJson.friends) {
     <>
       {list.map((friend) => (
         <a
-          className="friend-item inline-block bg-white rounded-lg transition duration-200 p-2 flex items-center transform hover:-translate-y-2 outline outline-1 outline-gray-200"
+          className="friend-item bg-white rounded-lg transition duration-200 p-2 flex items-center transform hover:-translate-y-2 outline outline-gray-200"
           key={friend.name}
           target="_blank"
           rel="noreferrer"
@@ -76,7 +76,7 @@ function FriendRender(list: typeof friendsJson.friends) {
                 "friend-item-default-intro text-dark-666 text-xs transition duration-400 xl:truncate",
                 {
                   "friend-slogan-display": friend.intro && friend.slogan,
-                }
+                },
               )}
             >
               {friend.intro || friend.slogan}

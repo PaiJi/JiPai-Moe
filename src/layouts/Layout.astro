@@ -29,7 +29,7 @@ const { title, description } = Astro.props;
       <aside
         class="mb-6 md:h-fit sticky xl:min-w-[400px] top-12 xl:px-6 flex xl:justify-center mt-20 lg:mt-0"
       >
-        <Header />
+        <Header client:idle />
       </aside>
       <main class="bg-white1 z-10 w-full xl:max-w-[850px] mt-11 md:mt-0">
         <Tab />
