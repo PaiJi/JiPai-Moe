@@ -3,18 +3,17 @@ import clsx from "clsx";
 import HeaderLink from "./HeaderLink.astro";
 import MobileTab from "./MobileTab";
 import { NavConfig } from "@src/consts";
-
 ---
 
 <header>
-  <nav class="hidden lg:block flex items-center gap-4 py-3">
+  <nav class="hidden lg:flex flex-wrap items-center gap-2 py-3">
     {
       NavConfig.map((nav) => (
         <HeaderLink
           class={clsx(
-            "text-slate-600 text-base inline-block align-baseline hover:text-primary-blue px-5 py-2"
+            "text-slate-600 text-base inline-block align-baseline hover:text-primary-blue px-5 py-2 hover:bg-white/50 rounded-lg hover:shadow",
           )}
-          activeClassName="bg-white rounded-lg shadow"
+          activeClassName="bg-white shadow"
           href={nav.href}
         >
           {nav.name}

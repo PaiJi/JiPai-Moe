@@ -3,10 +3,14 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
 
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.jipai.moe",
-  integrations: [mdx(), sitemap(), react(), tailwind()]
+  integrations: [mdx(), sitemap(), react()],
+
+  vite: {
+    plugins: [tailwindcss()]
+  }
 });

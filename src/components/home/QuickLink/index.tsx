@@ -20,11 +20,11 @@ export function QuickLinkSection() {
       primaryColor: "#1DA1F2",
       icon: <FaTwitterSquare />,
     },
-    {
-      href: "https://acg.mn/@jipai",
-      primaryColor: "#6364FF",
-      icon: <FaMastodon />,
-    },
+    // {
+    //   href: "https://acg.mn/@jipai",
+    //   primaryColor: "#6364FF",
+    //   icon: <FaMastodon />,
+    // },
     {
       href: "http://bgm.tv/user/338144",
       primaryColor: "#3c84f6",
